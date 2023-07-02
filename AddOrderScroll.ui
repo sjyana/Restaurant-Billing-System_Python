@@ -1,0 +1,4110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>JPanel1</class>
+ <widget class="QDialog" name="JPanel1">
+  <property name="windowModality">
+   <enum>Qt::ApplicationModal</enum>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1139</width>
+    <height>1191</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Add Order</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(247,241,232)</string>
+  </property>
+  <widget class="QLabel" name="jLabel14">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>10</y>
+     <width>1170</width>
+     <height>70</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap>pictures/logo.PNG</pixmap>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="jLabel1">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>80</y>
+     <width>1171</width>
+     <height>40</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Corbel</family>
+     <pointsize>25</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(66,72,40)</string>
+   </property>
+   <property name="text">
+    <string>Add Order</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+   <property name="wordWrap">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lblDate">
+   <property name="geometry">
+    <rect>
+     <x>440</x>
+     <y>130</y>
+     <width>151</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Corbel</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
+   <property name="text">
+    <string>date</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lblTime">
+   <property name="geometry">
+    <rect>
+     <x>600</x>
+     <y>130</y>
+     <width>111</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Corbel</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
+   <property name="text">
+    <string>time</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+   </property>
+  </widget>
+  <widget class="QWidget" name="JPanel3" native="true">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>170</y>
+     <width>641</width>
+     <height>90</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(247, 236, 240);</string>
+   </property>
+   <widget class="QPushButton" name="main">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>10</y>
+      <width>141</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Corbel</family>
+      <pointsize>10</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(188, 214, 249);</string>
+    </property>
+    <property name="text">
+     <string>Main Dishes</string>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>pictures/main.png</normaloff>pictures/main.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>55</width>
+      <height>55</height>
+     </size>
+    </property>
+    <property name="default">
+     <bool>false</bool>
+    </property>
+    <property name="flat">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="sides">
+    <property name="geometry">
+     <rect>
+      <x>190</x>
+      <y>10</y>
+      <width>141</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Corbel</family>
+      <pointsize>10</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-color: rgb(0, 0, 0);</string>
+    </property>
+    <property name="text">
+     <string>Sides</string>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>pictures/sides.png</normaloff>pictures/sides.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>55</width>
+      <height>55</height>
+     </size>
+    </property>
+    <property name="default">
+     <bool>false</bool>
+    </property>
+    <property name="flat">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="desserts">
+    <property name="geometry">
+     <rect>
+      <x>330</x>
+      <y>10</y>
+      <width>141</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Corbel</family>
+      <pointsize>10</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-color: rgb(0, 0, 0);</string>
+    </property>
+    <property name="text">
+     <string>Desserts</string>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>pictures/dessert.png</normaloff>pictures/dessert.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>55</width>
+      <height>55</height>
+     </size>
+    </property>
+    <property name="default">
+     <bool>false</bool>
+    </property>
+    <property name="flat">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="beverages">
+    <property name="geometry">
+     <rect>
+      <x>470</x>
+      <y>10</y>
+      <width>141</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Corbel</family>
+      <pointsize>10</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-color: rgb(0, 0, 0);</string>
+    </property>
+    <property name="text">
+     <string>Beverages</string>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>pictures/beverage.png</normaloff>pictures/beverage.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>55</width>
+      <height>55</height>
+     </size>
+    </property>
+    <property name="default">
+     <bool>false</bool>
+    </property>
+    <property name="flat">
+     <bool>false</bool>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QWidget" name="jPanel2" native="true">
+   <property name="geometry">
+    <rect>
+     <x>649</x>
+     <y>170</y>
+     <width>521</width>
+     <height>90</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(226, 237, 252);</string>
+   </property>
+   <widget class="QPushButton" name="deleteOrder">
+    <property name="geometry">
+     <rect>
+      <x>15</x>
+      <y>15</y>
+      <width>157</width>
+      <height>60</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Corbel</family>
+      <pointsize>10</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background: rgb(247,236,240);</string>
+    </property>
+    <property name="text">
+     <string>Delete Order</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="proceed">
+    <property name="geometry">
+     <rect>
+      <x>316</x>
+      <y>15</y>
+      <width>181</width>
+      <height>60</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Corbel</family>
+      <pointsize>10</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(247, 236, 240);</string>
+    </property>
+    <property name="text">
+     <string>Proceed to Payment</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="beverage1">
+    <property name="geometry">
+     <rect>
+      <x>184</x>
+      <y>20</y>
+      <width>121</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Corbel</family>
+      <pointsize>12</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>Total Amount:</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="total_lbl">
+    <property name="geometry">
+     <rect>
+      <x>184</x>
+      <y>51</y>
+      <width>121</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Corbel</family>
+      <pointsize>14</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>0.00</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QScrollArea" name="scrollArea_3">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>280</y>
+     <width>621</width>
+     <height>901</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"> QScrollBar:vertical {
+	border: none;
+    background: rgb(247,241,232)
+ }</string>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::NoFrame</enum>
+   </property>
+   <property name="horizontalScrollBarPolicy">
+    <enum>Qt::ScrollBarAlwaysOff</enum>
+   </property>
+   <property name="widgetResizable">
+    <bool>true</bool>
+   </property>
+   <widget class="QWidget" name="scrollAreaWidgetContents_4">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>-297</y>
+      <width>5018</width>
+      <height>1218</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout_3">
+     <item>
+      <widget class="QFrame" name="frame_2">
+       <property name="minimumSize">
+        <size>
+         <width>5000</width>
+         <height>1200</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true"/>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::StyledPanel</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Raised</enum>
+       </property>
+       <widget class="QStackedWidget" name="orderStackedWidget">
+        <property name="geometry">
+         <rect>
+          <x>-30</x>
+          <y>-10</y>
+          <width>661</width>
+          <height>901</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(241,247,251);</string>
+        </property>
+        <property name="currentIndex">
+         <number>0</number>
+        </property>
+        <widget class="QWidget" name="mainPanel">
+         <widget class="QWidget" name="foodMain" native="true">
+          <property name="geometry">
+           <rect>
+            <x>40</x>
+            <y>40</y>
+            <width>580</width>
+            <height>133</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(247,236,240);</string>
+          </property>
+          <widget class="QLabel" name="pic_main1">
+           <property name="geometry">
+            <rect>
+             <x>20</x>
+             <y>17</y>
+             <width>152</width>
+             <height>101</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(247,236,240);</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="pixmap">
+            <pixmap>food_pics/pan fried salmon.png</pixmap>
+           </property>
+          </widget>
+          <widget class="QLabel" name="nameMain1">
+           <property name="geometry">
+            <rect>
+             <x>192</x>
+             <y>17</y>
+             <width>211</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <family>Corbel</family>
+             <pointsize>12</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>Pan Fried Salmon</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="jLabel7">
+           <property name="geometry">
+            <rect>
+             <x>190</x>
+             <y>80</y>
+             <width>61</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <family>Corbel</family>
+             <weight>50</weight>
+             <bold>false</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>Quantity</string>
+           </property>
+          </widget>
+          <widget class="QTextEdit" name="qtty_main1">
+           <property name="geometry">
+            <rect>
+             <x>271</x>
+             <y>80</y>
+             <width>61</width>
+             <height>21</height>
+            </rect>
+           </property>
+           <property name="verticalScrollBarPolicy">
+            <enum>Qt::ScrollBarAlwaysOff</enum>
+           </property>
+          </widget>
+          <widget class="QLabel" name="jLabel2">
+           <property name="geometry">
+            <rect>
+             <x>470</x>
+             <y>17</y>
+             <width>31</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <family>Corbel</family>
+             <weight>50</weight>
+             <bold>false</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>Price</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="price_main1">
+           <property name="geometry">
+            <rect>
+             <x>521</x>
+             <y>10</y>
+             <width>31</width>
+             <height>31</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <family>Corbel</family>
+             <pointsize>12</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>220</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="desc_main">
+           <property name="geometry">
+            <rect>
+             <x>192</x>
+             <y>50</y>
+             <width>61</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <family>Corbel</family>
+             <weight>50</weight>
+             <bold>false</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>M1</string>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="addBttn_main1">
+           <property name="geometry">
+            <rect>
+             <x>459</x>
+             <y>80</y>
+             <width>93</width>
+             <height>28</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <family>Corbel</family>
+             <pointsize>12</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(251,101,99);
+color: rgb(255, 255, 255);</string>
+           </property>
+           <property name="text">
+            <string>Add</string>
+           </property>
+          </widget>
+         </widget>
+         <widget class="QWidget" name="foodMain1" native="true">
+          <property name="geometry">
+           <rect>
+            <x>40</x>
+            <y>213</y>
+            <width>580</width>
+            <height>133</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(247,236,240);</string>
+          </property>
+          <widget class="QLabel" name="pic_main2">
+           <property name="geometry">
+            <rect>
+             <x>20</x>
+             <y>17</y>
+             <width>152</width>
+             <height>101</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(247,236,240);</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="pixmap">
+            <pixmap>food_pics/crissy baked chicken.png</pixmap>
+           </property>
+          </widget>
+          <widget class="QLabel" name="nameMain2">
+           <property name="geometry">
+            <rect>
+             <x>192</x>
+             <y>17</y>
+             <width>211</width>
+             <height>21</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <family>Corbel</family>
+             <pointsize>12</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>Crsipy Baked Chicken</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="jLabel8">
+           <property name="geometry">
+            <rect>
+             <x>190</x>
+             <y>80</y>
+             <width>61</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <family>Corbel</family>
+             <weight>50</weight>
+             <bold>false</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>Quantity</string>
+           </property>
+          </widget>
+          <widget class="QTextEdit" name="qtty_main2">
+           <property name="geometry">
+            <rect>
+             <x>271</x>
+             <y>80</y>
+             <width>61</width>
+             <height>21</height>
+            </rect>
+           </property>
+           <property name="verticalScrollBarPolicy">
+            <enum>Qt::ScrollBarAlwaysOff</enum>
+           </property>
+          </widget>
+          <widget class="QLabel" name="jLabel42">
+           <property name="geometry">
+            <rect>
+             <x>470</x>
+             <y>17</y>
+             <width>31</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <family>Corbel</family>
+             <weight>50</weight>
+             <bold>false</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>Price</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="price_main2">
+           <property name="geometry">
+            <rect>
+             <x>521</x>
+             <y>10</y>
+             <width>31</width>
+             <height>31</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <family>Corbel</family>
+             <pointsize>12</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>160</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="desc_main5">
+           <property name="geometry">
+            <rect>
+             <x>192</x>
+             <y>50</y>
+             <width>61</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <family>Corbel</family>
+             <weight>50</weight>
+             <bold>false</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>M2</string>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="addBttn_main2">
+           <property name="geometry">
+            <rect>
+             <x>459</x>
+             <y>80</y>
+             <width>93</width>
+             <height>28</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <family>Corbel</family>
+             <pointsize>12</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(251,101,99);
+color: rgb(255, 255, 255);</string>
+           </property>
+           <property name="text">
+            <string>Add</string>
+           </property>
+          </widget>
+         </widget>
+         <widget class="QWidget" name="foodMain2" native="true">
+          <property name="geometry">
+           <rect>
+            <x>40</x>
+            <y>386</y>
+            <width>580</width>
+            <height>133</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(247,236,240);</string>
+          </property>
+          <widget class="QLabel" name="pic_main3">
+           <property name="geometry">
+            <rect>
+             <x>20</x>
+             <y>17</y>
+             <width>152</width>
+             <height>101</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(247,236,240);</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="pixmap">
+            <pixmap>food_pics/teriyaki chicken bowl.png</pixmap>
+           </property>
+          </widget>
+          <widget class="QLabel" name="nameMain3">
+           <property name="geometry">
+            <rect>
+             <x>192</x>
+             <y>17</y>
+             <width>211</width>
+             <height>21</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <family>Corbel</family>
+             <pointsize>12</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>Teriyaki Chicken Bowl</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="jLabel9">
+           <property name="geometry">
+            <rect>
+             <x>190</x>
+             <y>80</y>
+             <width>61</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <family>Corbel</family>
+             <weight>50</weight>
+             <bold>false</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>Quantity</string>
+           </property>
+          </widget>
+          <widget class="QTextEdit" name="qtty_main3">
+           <property name="geometry">
+            <rect>
+             <x>271</x>
+             <y>80</y>
+             <width>61</width>
+             <height>21</height>
+            </rect>
+           </property>
+           <property name="verticalScrollBarPolicy">
+            <enum>Qt::ScrollBarAlwaysOff</enum>
+           </property>
+          </widget>
+          <widget class="QLabel" name="jLabel12">
+           <property name="geometry">
+            <rect>
+             <x>470</x>
+             <y>17</y>
+             <width>31</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <family>Corbel</family>
+             <weight>50</weight>
+             <bold>false</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>Price</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="price_main3">
+           <property name="geometry">
+            <rect>
+             <x>521</x>
+             <y>10</y>
+             <width>31</width>
+             <height>31</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <family>Corbel</family>
+             <pointsize>12</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>180</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="desc_main6">
+           <property name="geometry">
+            <rect>
+             <x>192</x>
+             <y>50</y>
+             <width>61</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <family>Corbel</family>
+             <weight>50</weight>
+             <bold>false</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>M3</string>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="addBttn_main3">
+           <property name="geometry">
+            <rect>
+             <x>459</x>
+             <y>80</y>
+             <width>93</width>
+             <height>28</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <family>Corbel</family>
+             <pointsize>12</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(251,101,99);
+color: rgb(255, 255, 255);</string>
+           </property>
+           <property name="text">
+            <string>Add</string>
+           </property>
+          </widget>
+         </widget>
+         <widget class="QWidget" name="foodMain3" native="true">
+          <property name="geometry">
+           <rect>
+            <x>40</x>
+            <y>559</y>
+            <width>580</width>
+            <height>133</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(247,236,240);</string>
+          </property>
+          <widget class="QLabel" name="pic_main4">
+           <property name="geometry">
+            <rect>
+             <x>20</x>
+             <y>17</y>
+             <width>152</width>
+             <height>101</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(247,236,240);</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="pixmap">
+            <pixmap>food_pics/golden shrimp.png</pixmap>
+           </property>
+          </widget>
+          <widget class="QLabel" name="nameMain4">
+           <property name="geometry">
+            <rect>
+             <x>192</x>
+             <y>17</y>
+             <width>211</width>
+             <height>21</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <family>Corbel</family>
+             <pointsize>12</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>Golden Shrimp</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="jLabel10">
+           <property name="geometry">
+            <rect>
+             <x>190</x>
+             <y>80</y>
+             <width>61</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <family>Corbel</family>
+             <weight>50</weight>
+             <bold>false</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>Quantity</string>
+           </property>
+          </widget>
+          <widget class="QTextEdit" name="qtty_main4">
+           <property name="geometry">
+            <rect>
+             <x>271</x>
+             <y>80</y>
+             <width>61</width>
+             <height>21</height>
+            </rect>
+           </property>
+           <property name="verticalScrollBarPolicy">
+            <enum>Qt::ScrollBarAlwaysOff</enum>
+           </property>
+          </widget>
+          <widget class="QLabel" name="jLabel13">
+           <property name="geometry">
+            <rect>
+             <x>470</x>
+             <y>17</y>
+             <width>31</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <family>Corbel</family>
+             <weight>50</weight>
+             <bold>false</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>Price</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="price_main4">
+           <property name="geometry">
+            <rect>
+             <x>521</x>
+             <y>10</y>
+             <width>31</width>
+             <height>31</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <family>Corbel</family>
+             <pointsize>12</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>200</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="desc_main7">
+           <property name="geometry">
+            <rect>
+             <x>192</x>
+             <y>50</y>
+             <width>61</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <family>Corbel</family>
+             <weight>50</weight>
+             <bold>false</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>M4</string>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="addBttn_main4">
+           <property name="geometry">
+            <rect>
+             <x>459</x>
+             <y>80</y>
+             <width>93</width>
+             <height>28</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <family>Corbel</family>
+             <pointsize>12</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(251,101,99);
+color: rgb(255, 255, 255);</string>
+           </property>
+           <property name="text">
+            <string>Add</string>
+           </property>
+          </widget>
+         </widget>
+         <widget class="QWidget" name="foodMain4" native="true">
+          <property name="geometry">
+           <rect>
+            <x>40</x>
+            <y>732</y>
+            <width>580</width>
+            <height>133</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(247,236,240);</string>
+          </property>
+          <widget class="QLabel" name="pic_main5">
+           <property name="geometry">
+            <rect>
+             <x>20</x>
+             <y>17</y>
+             <width>152</width>
+             <height>101</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(247,236,240);</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="pixmap">
+            <pixmap>food_pics/stuffed chicken breast.png</pixmap>
+           </property>
+          </widget>
+          <widget class="QLabel" name="nameMain5">
+           <property name="geometry">
+            <rect>
+             <x>192</x>
+             <y>17</y>
+             <width>211</width>
+             <height>21</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <family>Corbel</family>
+             <pointsize>12</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>Stuffed Chicken Breast</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="jLabel11">
+           <property name="geometry">
+            <rect>
+             <x>190</x>
+             <y>80</y>
+             <width>61</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <family>Corbel</family>
+             <weight>50</weight>
+             <bold>false</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>Quantity</string>
+           </property>
+          </widget>
+          <widget class="QTextEdit" name="qtty_main5">
+           <property name="geometry">
+            <rect>
+             <x>271</x>
+             <y>80</y>
+             <width>61</width>
+             <height>21</height>
+            </rect>
+           </property>
+           <property name="verticalScrollBarPolicy">
+            <enum>Qt::ScrollBarAlwaysOff</enum>
+           </property>
+          </widget>
+          <widget class="QLabel" name="jLabel43">
+           <property name="geometry">
+            <rect>
+             <x>470</x>
+             <y>17</y>
+             <width>31</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <family>Corbel</family>
+             <weight>50</weight>
+             <bold>false</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>Price</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="price_main5">
+           <property name="geometry">
+            <rect>
+             <x>521</x>
+             <y>10</y>
+             <width>31</width>
+             <height>31</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <family>Corbel</family>
+             <pointsize>12</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>190</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="desc_main8">
+           <property name="geometry">
+            <rect>
+             <x>192</x>
+             <y>50</y>
+             <width>61</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <family>Corbel</family>
+             <weight>50</weight>
+             <bold>false</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>M5</string>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="addBttn_main5">
+           <property name="geometry">
+            <rect>
+             <x>459</x>
+             <y>80</y>
+             <width>93</width>
+             <height>28</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <family>Corbel</family>
+             <pointsize>12</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(251,101,99);
+color: rgb(255, 255, 255);</string>
+           </property>
+           <property name="text">
+            <string>Add</string>
+           </property>
+          </widget>
+         </widget>
+        </widget>
+        <widget class="QWidget" name="sidePanel">
+         <widget class="QWidget" name="foodSides6" native="true">
+          <property name="geometry">
+           <rect>
+            <x>40</x>
+            <y>213</y>
+            <width>580</width>
+            <height>133</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(243,236,215);</string>
+          </property>
+          <widget class="QLabel" name="pic_side1">
+           <property name="geometry">
+            <rect>
+             <x>20</x>
+             <y>17</y>
+             <width>152</width>
+             <height>101</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(243,236,215);</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="pixmap">
+            <pixmap>food_pics/French fries with aoili.png</pixmap>
+           </property>
+          </widget>
+          <widget class="QLabel" name="nameSide16">
+           <property name="geometry">
+            <rect>
+             <x>192</x>
+             <y>17</y>
+             <width>191</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <family>Corbel</family>
+             <pointsize>12</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>French Fries with Aioli</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="jLabel44_6">
+           <property name="geometry">
+            <rect>
+             <x>470</x>
+             <y>17</y>
+             <width>31</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <family>Corbel</family>
+             <weight>50</weight>
+             <bold>false</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>Price</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="jLabel25_6">
+           <property name="geometry">
+            <rect>
+             <x>190</x>
+             <y>80</y>
+             <width>61</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <family>Corbel</family>
+             <weight>50</weight>
+             <bold>false</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>Quantity</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="price_dessert1_6">
+           <property name="geometry">
+            <rect>
+             <x>521</x>
+             <y>10</y>
+             <width>31</width>
+             <height>31</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <family>Corbel</family>
+             <pointsize>12</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>80</string>
+           </property>
+          </widget>
+          <widget class="QTextEdit" name="qtty_side2">
+           <property name="geometry">
+            <rect>
+             <x>271</x>
+             <y>80</y>
+             <width>61</width>
+             <height>21</height>
+            </rect>
+           </property>
+           <property name="verticalScrollBarPolicy">
+            <enum>Qt::ScrollBarAlwaysOff</enum>
+           </property>
+          </widget>
+          <widget class="QLabel" name="desc_side16_2">
+           <property name="geometry">
+            <rect>
+             <x>192</x>
+             <y>50</y>
+             <width>61</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <family>Corbel</family>
+             <weight>50</weight>
+             <bold>false</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>S1</string>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="addBttn_side2">
+           <property name="geometry">
+            <rect>
+             <x>459</x>
+             <y>80</y>
+             <width>93</width>
+             <height>28</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <family>Corbel</family>
+             <pointsize>12</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(201,166,65);
+color: rgb(255, 255, 255);</string>
+           </property>
+           <property name="text">
+            <string>Add</string>
+           </property>
+          </widget>
+         </widget>
+         <widget class="QWidget" name="foodSides8" native="true">
+          <property name="geometry">
+           <rect>
+            <x>40</x>
+            <y>386</y>
+            <width>580</width>
+            <height>133</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(243,236,215);</string>
+          </property>
+          <widget class="QLabel" name="pic_side3">
+           <property name="geometry">
+            <rect>
+             <x>20</x>
+             <y>17</y>
+             <width>152</width>
+             <height>101</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(243,236,215);</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="pixmap">
+            <pixmap>food_pics/Chipotle Mashed Potatoes.png</pixmap>
+           </property>
+          </widget>
+          <widget class="QLabel" name="nameSide18">
+           <property name="geometry">
+            <rect>
+             <x>192</x>
+             <y>17</y>
+             <width>231</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <family>Corbel</family>
+             <pointsize>12</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>Chipotle Mashed Potatoes</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="jLabel46_5">
+           <property name="geometry">
+            <rect>
+             <x>470</x>
+             <y>17</y>
+             <width>31</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <family>Corbel</family>
+             <weight>50</weight>
+             <bold>false</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>Price</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="price_dessert3_5">
+           <property name="geometry">
+            <rect>
+             <x>521</x>
+             <y>10</y>
+             <width>21</width>
+             <height>31</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <family>Corbel</family>
+             <pointsize>12</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>75</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="jLabel27_5">
+           <property name="geometry">
+            <rect>
+             <x>190</x>
+             <y>80</y>
+             <width>61</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <family>Corbel</family>
+             <weight>50</weight>
+             <bold>false</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>Quantity</string>
+           </property>
+          </widget>
+          <widget class="QTextEdit" name="qtty_side3">
+           <property name="geometry">
+            <rect>
+             <x>271</x>
+             <y>80</y>
+             <width>61</width>
+             <height>21</height>
+            </rect>
+           </property>
+           <property name="verticalScrollBarPolicy">
+            <enum>Qt::ScrollBarAlwaysOff</enum>
+           </property>
+          </widget>
+          <widget class="QLabel" name="desc_side3_5">
+           <property name="geometry">
+            <rect>
+             <x>192</x>
+             <y>50</y>
+             <width>61</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <family>Corbel</family>
+             <weight>50</weight>
+             <bold>false</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>S3</string>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="addBttn_side3">
+           <property name="geometry">
+            <rect>
+             <x>459</x>
+             <y>80</y>
+             <width>93</width>
+             <height>28</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <family>Corbel</family>
+             <pointsize>12</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(201,166,65);
+color: rgb(255, 255, 255);</string>
+           </property>
+           <property name="text">
+            <string>Add</string>
+           </property>
+          </widget>
+         </widget>
+         <widget class="QWidget" name="foodSides9" native="true">
+          <property name="geometry">
+           <rect>
+            <x>40</x>
+            <y>559</y>
+            <width>580</width>
+            <height>133</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(243,236,215);</string>
+          </property>
+          <widget class="QLabel" name="pic_side4">
+           <property name="geometry">
+            <rect>
+             <x>20</x>
+             <y>17</y>
+             <width>152</width>
+             <height>101</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(243,236,215);</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="pixmap">
+            <pixmap>food_pics/Pesto Pasta Salad.png</pixmap>
+           </property>
+          </widget>
+          <widget class="QLabel" name="nameSide19">
+           <property name="geometry">
+            <rect>
+             <x>192</x>
+             <y>17</y>
+             <width>151</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <family>Corbel</family>
+             <pointsize>12</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>Pesto Pasta Salad</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="jLabel47_5">
+           <property name="geometry">
+            <rect>
+             <x>470</x>
+             <y>17</y>
+             <width>31</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <family>Corbel</family>
+             <weight>50</weight>
+             <bold>false</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>Price</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="price_dessert4_5">
+           <property name="geometry">
+            <rect>
+             <x>521</x>
+             <y>10</y>
+             <width>21</width>
+             <height>31</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <family>Corbel</family>
+             <pointsize>12</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>90</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="jLabel28_5">
+           <property name="geometry">
+            <rect>
+             <x>190</x>
+             <y>80</y>
+             <width>61</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <family>Corbel</family>
+             <weight>50</weight>
+             <bold>false</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>Quantity</string>
+           </property>
+          </widget>
+          <widget class="QTextEdit" name="qtty_side4">
+           <property name="geometry">
+            <rect>
+             <x>271</x>
+             <y>80</y>
+             <width>61</width>
+             <height>21</height>
+            </rect>
+           </property>
+           <property name="verticalScrollBarPolicy">
+            <enum>Qt::ScrollBarAlwaysOff</enum>
+           </property>
+          </widget>
+          <widget class="QLabel" name="desc_side4_5">
+           <property name="geometry">
+            <rect>
+             <x>192</x>
+             <y>50</y>
+             <width>61</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <family>Corbel</family>
+             <weight>50</weight>
+             <bold>false</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>S4</string>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="addBttn_side4">
+           <property name="geometry">
+            <rect>
+             <x>459</x>
+             <y>80</y>
+             <width>93</width>
+             <height>28</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <family>Corbel</family>
+             <pointsize>12</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(201,166,65);
+color: rgb(255, 255, 255);</string>
+           </property>
+           <property name="text">
+            <string>Add</string>
+           </property>
+          </widget>
+         </widget>
+         <widget class="QWidget" name="foodSides7" native="true">
+          <property name="geometry">
+           <rect>
+            <x>40</x>
+            <y>40</y>
+            <width>580</width>
+            <height>133</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(243,236,215);</string>
+          </property>
+          <widget class="QLabel" name="pic_side2">
+           <property name="geometry">
+            <rect>
+             <x>20</x>
+             <y>17</y>
+             <width>152</width>
+             <height>101</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(243,236,215);</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="pixmap">
+            <pixmap>food_pics/Sautee Collard Greens.png</pixmap>
+           </property>
+          </widget>
+          <widget class="QLabel" name="nameSide17">
+           <property name="geometry">
+            <rect>
+             <x>192</x>
+             <y>17</y>
+             <width>211</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <family>Corbel</family>
+             <pointsize>12</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>Collard Greens</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="jLabel26_5">
+           <property name="geometry">
+            <rect>
+             <x>190</x>
+             <y>80</y>
+             <width>61</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <family>Corbel</family>
+             <weight>50</weight>
+             <bold>false</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>Quantity</string>
+           </property>
+          </widget>
+          <widget class="QTextEdit" name="qtty_side1">
+           <property name="geometry">
+            <rect>
+             <x>271</x>
+             <y>80</y>
+             <width>61</width>
+             <height>21</height>
+            </rect>
+           </property>
+           <property name="verticalScrollBarPolicy">
+            <enum>Qt::ScrollBarAlwaysOff</enum>
+           </property>
+          </widget>
+          <widget class="QLabel" name="jLabel45_5">
+           <property name="geometry">
+            <rect>
+             <x>470</x>
+             <y>17</y>
+             <width>31</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <family>Corbel</family>
+             <weight>50</weight>
+             <bold>false</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>Price</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="price_dessert2_5">
+           <property name="geometry">
+            <rect>
+             <x>521</x>
+             <y>10</y>
+             <width>21</width>
+             <height>31</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <family>Corbel</family>
+             <pointsize>12</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>60</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="desc_side17_2">
+           <property name="geometry">
+            <rect>
+             <x>192</x>
+             <y>50</y>
+             <width>61</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <family>Corbel</family>
+             <weight>50</weight>
+             <bold>false</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>S2</string>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="addBttn_side1">
+           <property name="geometry">
+            <rect>
+             <x>459</x>
+             <y>80</y>
+             <width>93</width>
+             <height>28</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <family>Corbel</family>
+             <pointsize>12</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(201,166,65);
+color: rgb(255, 255, 255);</string>
+           </property>
+           <property name="text">
+            <string>Add</string>
+           </property>
+          </widget>
+         </widget>
+         <widget class="QWidget" name="foodSides10" native="true">
+          <property name="geometry">
+           <rect>
+            <x>40</x>
+            <y>732</y>
+            <width>580</width>
+            <height>133</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(243,236,215);</string>
+          </property>
+          <widget class="QLabel" name="pic_side5">
+           <property name="geometry">
+            <rect>
+             <x>20</x>
+             <y>17</y>
+             <width>152</width>
+             <height>101</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(243,236,215);</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="pixmap">
+            <pixmap>food_pics/Steamed rice.png</pixmap>
+           </property>
+          </widget>
+          <widget class="QLabel" name="nameSide20">
+           <property name="geometry">
+            <rect>
+             <x>192</x>
+             <y>17</y>
+             <width>141</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <family>Corbel</family>
+             <pointsize>12</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>Steamed Rice</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="jLabel29_5">
+           <property name="geometry">
+            <rect>
+             <x>190</x>
+             <y>80</y>
+             <width>61</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <family>Corbel</family>
+             <weight>50</weight>
+             <bold>false</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>Quantity</string>
+           </property>
+          </widget>
+          <widget class="QTextEdit" name="qtty_side5">
+           <property name="geometry">
+            <rect>
+             <x>271</x>
+             <y>80</y>
+             <width>61</width>
+             <height>21</height>
+            </rect>
+           </property>
+           <property name="verticalScrollBarPolicy">
+            <enum>Qt::ScrollBarAlwaysOff</enum>
+           </property>
+          </widget>
+          <widget class="QLabel" name="jLabel48_5">
+           <property name="geometry">
+            <rect>
+             <x>470</x>
+             <y>17</y>
+             <width>31</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <family>Corbel</family>
+             <weight>50</weight>
+             <bold>false</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>Price</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="price_dessert5_5">
+           <property name="geometry">
+            <rect>
+             <x>521</x>
+             <y>10</y>
+             <width>21</width>
+             <height>31</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <family>Corbel</family>
+             <pointsize>12</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>35</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="desc_side5_5">
+           <property name="geometry">
+            <rect>
+             <x>192</x>
+             <y>50</y>
+             <width>61</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <family>Corbel</family>
+             <weight>50</weight>
+             <bold>false</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>S5</string>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="addBttn_side5">
+           <property name="geometry">
+            <rect>
+             <x>459</x>
+             <y>80</y>
+             <width>93</width>
+             <height>28</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <family>Corbel</family>
+             <pointsize>12</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(201,166,65);
+color: rgb(255, 255, 255);</string>
+           </property>
+           <property name="text">
+            <string>Add</string>
+           </property>
+          </widget>
+         </widget>
+        </widget>
+        <widget class="QWidget" name="dessertPanel">
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(241, 247, 251);</string>
+         </property>
+         <widget class="QWidget" name="foodDessert_4" native="true">
+          <property name="geometry">
+           <rect>
+            <x>40</x>
+            <y>40</y>
+            <width>580</width>
+            <height>133</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(235,219,218);</string>
+          </property>
+          <widget class="QLabel" name="pic_dessert1_5">
+           <property name="geometry">
+            <rect>
+             <x>20</x>
+             <y>17</y>
+             <width>152</width>
+             <height>101</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(235,219,218);</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="pixmap">
+            <pixmap>food_pics/tiramisu.png</pixmap>
+           </property>
+          </widget>
+          <widget class="QLabel" name="nameSide6_5">
+           <property name="geometry">
+            <rect>
+             <x>192</x>
+             <y>17</y>
+             <width>101</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <family>Corbel</family>
+             <pointsize>12</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>Tiramisu</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="jLabel44_5">
+           <property name="geometry">
+            <rect>
+             <x>470</x>
+             <y>17</y>
+             <width>31</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <family>Corbel</family>
+             <weight>50</weight>
+             <bold>false</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>Price</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="jLabel25_5">
+           <property name="geometry">
+            <rect>
+             <x>190</x>
+             <y>80</y>
+             <width>61</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <family>Corbel</family>
+             <weight>50</weight>
+             <bold>false</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>Quantity</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="price_dessert1_5">
+           <property name="geometry">
+            <rect>
+             <x>521</x>
+             <y>10</y>
+             <width>31</width>
+             <height>31</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <family>Corbel</family>
+             <pointsize>12</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>100</string>
+           </property>
+          </widget>
+          <widget class="QTextEdit" name="qtty_dessert1">
+           <property name="geometry">
+            <rect>
+             <x>271</x>
+             <y>80</y>
+             <width>61</width>
+             <height>21</height>
+            </rect>
+           </property>
+           <property name="verticalScrollBarPolicy">
+            <enum>Qt::ScrollBarAlwaysOff</enum>
+           </property>
+          </widget>
+          <widget class="QLabel" name="desc_side1_5">
+           <property name="geometry">
+            <rect>
+             <x>192</x>
+             <y>50</y>
+             <width>61</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <family>Corbel</family>
+             <weight>50</weight>
+             <bold>false</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>D1</string>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="addBttn_dessert1">
+           <property name="geometry">
+            <rect>
+             <x>459</x>
+             <y>80</y>
+             <width>93</width>
+             <height>28</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <family>Corbel</family>
+             <pointsize>12</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(166, 93, 88);
+color: rgb(255, 255, 255);</string>
+           </property>
+           <property name="text">
+            <string>Add</string>
+           </property>
+          </widget>
+         </widget>
+         <widget class="QWidget" name="foodDessert2_4" native="true">
+          <property name="geometry">
+           <rect>
+            <x>40</x>
+            <y>213</y>
+            <width>580</width>
+            <height>133</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(235,219,218);</string>
+          </property>
+          <widget class="QLabel" name="pic_dessert2_4">
+           <property name="geometry">
+            <rect>
+             <x>20</x>
+             <y>17</y>
+             <width>152</width>
+             <height>101</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(235,219,218);</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="pixmap">
+            <pixmap>food_pics/cheesecake w berries.png</pixmap>
+           </property>
+          </widget>
+          <widget class="QLabel" name="nameSide7_4">
+           <property name="geometry">
+            <rect>
+             <x>192</x>
+             <y>17</y>
+             <width>211</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <family>Corbel</family>
+             <pointsize>12</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>Cheesecake with Berries</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="jLabel26_4">
+           <property name="geometry">
+            <rect>
+             <x>190</x>
+             <y>80</y>
+             <width>61</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <family>Corbel</family>
+             <weight>50</weight>
+             <bold>false</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>Quantity</string>
+           </property>
+          </widget>
+          <widget class="QTextEdit" name="qtty_dessert2">
+           <property name="geometry">
+            <rect>
+             <x>271</x>
+             <y>80</y>
+             <width>61</width>
+             <height>21</height>
+            </rect>
+           </property>
+           <property name="verticalScrollBarPolicy">
+            <enum>Qt::ScrollBarAlwaysOff</enum>
+           </property>
+          </widget>
+          <widget class="QLabel" name="jLabel45_4">
+           <property name="geometry">
+            <rect>
+             <x>470</x>
+             <y>17</y>
+             <width>31</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <family>Corbel</family>
+             <weight>50</weight>
+             <bold>false</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>Price</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="price_dessert2_4">
+           <property name="geometry">
+            <rect>
+             <x>521</x>
+             <y>10</y>
+             <width>21</width>
+             <height>31</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <family>Corbel</family>
+             <pointsize>12</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>90</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="desc_side2_4">
+           <property name="geometry">
+            <rect>
+             <x>192</x>
+             <y>50</y>
+             <width>61</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <family>Corbel</family>
+             <weight>50</weight>
+             <bold>false</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>D2</string>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="addBttn_dessert2">
+           <property name="geometry">
+            <rect>
+             <x>459</x>
+             <y>80</y>
+             <width>93</width>
+             <height>28</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <family>Corbel</family>
+             <pointsize>12</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(166, 93, 88);
+color: rgb(255, 255, 255);</string>
+           </property>
+           <property name="text">
+            <string>Add</string>
+           </property>
+          </widget>
+         </widget>
+         <widget class="QWidget" name="foodDessert3_4" native="true">
+          <property name="geometry">
+           <rect>
+            <x>40</x>
+            <y>386</y>
+            <width>580</width>
+            <height>133</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(235,219,218);</string>
+          </property>
+          <widget class="QLabel" name="pic_dessert3_4">
+           <property name="geometry">
+            <rect>
+             <x>20</x>
+             <y>17</y>
+             <width>152</width>
+             <height>101</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(235,219,218);</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="pixmap">
+            <pixmap>food_pics/Creme caramel.png</pixmap>
+           </property>
+          </widget>
+          <widget class="QLabel" name="nameSide8_4">
+           <property name="geometry">
+            <rect>
+             <x>192</x>
+             <y>17</y>
+             <width>161</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <family>Corbel</family>
+             <pointsize>12</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>Creme Caramel</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="jLabel46_4">
+           <property name="geometry">
+            <rect>
+             <x>470</x>
+             <y>17</y>
+             <width>31</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <family>Corbel</family>
+             <weight>50</weight>
+             <bold>false</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>Price</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="price_dessert3_4">
+           <property name="geometry">
+            <rect>
+             <x>521</x>
+             <y>10</y>
+             <width>21</width>
+             <height>31</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <family>Corbel</family>
+             <pointsize>12</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>80</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="jLabel27_4">
+           <property name="geometry">
+            <rect>
+             <x>190</x>
+             <y>80</y>
+             <width>61</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <family>Corbel</family>
+             <weight>50</weight>
+             <bold>false</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>Quantity</string>
+           </property>
+          </widget>
+          <widget class="QTextEdit" name="qtty_dessert3">
+           <property name="geometry">
+            <rect>
+             <x>271</x>
+             <y>80</y>
+             <width>61</width>
+             <height>21</height>
+            </rect>
+           </property>
+           <property name="verticalScrollBarPolicy">
+            <enum>Qt::ScrollBarAlwaysOff</enum>
+           </property>
+          </widget>
+          <widget class="QLabel" name="desc_side3_4">
+           <property name="geometry">
+            <rect>
+             <x>192</x>
+             <y>50</y>
+             <width>61</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <family>Corbel</family>
+             <weight>50</weight>
+             <bold>false</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>D3</string>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="addBttn_dessert3">
+           <property name="geometry">
+            <rect>
+             <x>459</x>
+             <y>80</y>
+             <width>93</width>
+             <height>28</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <family>Corbel</family>
+             <pointsize>12</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(166, 93, 88);
+color: rgb(255, 255, 255);</string>
+           </property>
+           <property name="text">
+            <string>Add</string>
+           </property>
+          </widget>
+         </widget>
+         <widget class="QWidget" name="foodDessert4_4" native="true">
+          <property name="geometry">
+           <rect>
+            <x>40</x>
+            <y>559</y>
+            <width>580</width>
+            <height>133</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(235,219,218);</string>
+          </property>
+          <widget class="QLabel" name="pic_dessert4_4">
+           <property name="geometry">
+            <rect>
+             <x>20</x>
+             <y>17</y>
+             <width>152</width>
+             <height>101</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(235,219,218);</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="pixmap">
+            <pixmap>food_pics/Blackberry pie.png</pixmap>
+           </property>
+          </widget>
+          <widget class="QLabel" name="nameSide9_4">
+           <property name="geometry">
+            <rect>
+             <x>192</x>
+             <y>17</y>
+             <width>121</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <family>Corbel</family>
+             <pointsize>12</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>Blackberry Pie</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="jLabel47_4">
+           <property name="geometry">
+            <rect>
+             <x>470</x>
+             <y>17</y>
+             <width>31</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <family>Corbel</family>
+             <weight>50</weight>
+             <bold>false</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>Price</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="price_dessert4_4">
+           <property name="geometry">
+            <rect>
+             <x>521</x>
+             <y>10</y>
+             <width>21</width>
+             <height>31</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <family>Corbel</family>
+             <pointsize>12</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>85</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="jLabel28_4">
+           <property name="geometry">
+            <rect>
+             <x>190</x>
+             <y>80</y>
+             <width>61</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <family>Corbel</family>
+             <weight>50</weight>
+             <bold>false</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>Quantity</string>
+           </property>
+          </widget>
+          <widget class="QTextEdit" name="qtty_dessert4">
+           <property name="geometry">
+            <rect>
+             <x>271</x>
+             <y>80</y>
+             <width>61</width>
+             <height>21</height>
+            </rect>
+           </property>
+           <property name="verticalScrollBarPolicy">
+            <enum>Qt::ScrollBarAlwaysOff</enum>
+           </property>
+          </widget>
+          <widget class="QLabel" name="desc_side4_4">
+           <property name="geometry">
+            <rect>
+             <x>192</x>
+             <y>50</y>
+             <width>61</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <family>Corbel</family>
+             <weight>50</weight>
+             <bold>false</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>D4</string>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="addBttn_dessert4">
+           <property name="geometry">
+            <rect>
+             <x>459</x>
+             <y>80</y>
+             <width>93</width>
+             <height>28</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <family>Corbel</family>
+             <pointsize>12</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(166, 93, 88);
+color: rgb(255, 255, 255);</string>
+           </property>
+           <property name="text">
+            <string>Add</string>
+           </property>
+          </widget>
+         </widget>
+         <widget class="QWidget" name="foodDessert5_4" native="true">
+          <property name="geometry">
+           <rect>
+            <x>40</x>
+            <y>732</y>
+            <width>580</width>
+            <height>133</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(235,219,218);</string>
+          </property>
+          <widget class="QLabel" name="pic_dessert5_4">
+           <property name="geometry">
+            <rect>
+             <x>20</x>
+             <y>17</y>
+             <width>152</width>
+             <height>101</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(235,219,218);</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="pixmap">
+            <pixmap>food_pics/Red Velvet cake.png</pixmap>
+           </property>
+          </widget>
+          <widget class="QLabel" name="nameSide10_30">
+           <property name="geometry">
+            <rect>
+             <x>192</x>
+             <y>17</y>
+             <width>141</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <family>Corbel</family>
+             <pointsize>12</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>Red Velvet Cake</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="jLabel29_4">
+           <property name="geometry">
+            <rect>
+             <x>190</x>
+             <y>80</y>
+             <width>61</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <family>Corbel</family>
+             <weight>50</weight>
+             <bold>false</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>Quantity</string>
+           </property>
+          </widget>
+          <widget class="QTextEdit" name="qtty_dessert5">
+           <property name="geometry">
+            <rect>
+             <x>271</x>
+             <y>80</y>
+             <width>61</width>
+             <height>21</height>
+            </rect>
+           </property>
+           <property name="verticalScrollBarPolicy">
+            <enum>Qt::ScrollBarAlwaysOff</enum>
+           </property>
+          </widget>
+          <widget class="QLabel" name="jLabel48_4">
+           <property name="geometry">
+            <rect>
+             <x>470</x>
+             <y>17</y>
+             <width>31</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <family>Corbel</family>
+             <weight>50</weight>
+             <bold>false</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>Price</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="price_dessert5_4">
+           <property name="geometry">
+            <rect>
+             <x>521</x>
+             <y>10</y>
+             <width>21</width>
+             <height>31</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <family>Corbel</family>
+             <pointsize>12</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>90</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="desc_side5_4">
+           <property name="geometry">
+            <rect>
+             <x>192</x>
+             <y>50</y>
+             <width>61</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <family>Corbel</family>
+             <weight>50</weight>
+             <bold>false</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>D5</string>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="addBttn_dessert5">
+           <property name="geometry">
+            <rect>
+             <x>459</x>
+             <y>80</y>
+             <width>93</width>
+             <height>28</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <family>Corbel</family>
+             <pointsize>12</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(166, 93, 88);
+color: rgb(255, 255, 255);</string>
+           </property>
+           <property name="text">
+            <string>Add</string>
+           </property>
+          </widget>
+         </widget>
+        </widget>
+        <widget class="QWidget" name="beveragePanel">
+         <widget class="QWidget" name="foodBev1" native="true">
+          <property name="geometry">
+           <rect>
+            <x>40</x>
+            <y>40</y>
+            <width>580</width>
+            <height>133</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(231,234,218);</string>
+          </property>
+          <widget class="QLabel" name="pic_bev1">
+           <property name="geometry">
+            <rect>
+             <x>20</x>
+             <y>17</y>
+             <width>152</width>
+             <height>101</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(231,234,218);</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="pixmap">
+            <pixmap>food_pics/soda water.png</pixmap>
+           </property>
+          </widget>
+          <widget class="QLabel" name="nameSide10">
+           <property name="geometry">
+            <rect>
+             <x>192</x>
+             <y>17</y>
+             <width>101</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <family>Corbel</family>
+             <pointsize>12</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>Soda Water</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="jLabel55">
+           <property name="geometry">
+            <rect>
+             <x>470</x>
+             <y>17</y>
+             <width>31</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <family>Corbel</family>
+             <weight>50</weight>
+             <bold>false</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>Price</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="jLabel36">
+           <property name="geometry">
+            <rect>
+             <x>190</x>
+             <y>80</y>
+             <width>61</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <family>Corbel</family>
+             <weight>50</weight>
+             <bold>false</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>Quantity</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="price_bev1">
+           <property name="geometry">
+            <rect>
+             <x>521</x>
+             <y>10</y>
+             <width>21</width>
+             <height>31</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <family>Corbel</family>
+             <pointsize>12</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>30</string>
+           </property>
+          </widget>
+          <widget class="QTextEdit" name="qtty_bev1">
+           <property name="geometry">
+            <rect>
+             <x>271</x>
+             <y>80</y>
+             <width>61</width>
+             <height>21</height>
+            </rect>
+           </property>
+           <property name="verticalScrollBarPolicy">
+            <enum>Qt::ScrollBarAlwaysOff</enum>
+           </property>
+          </widget>
+          <widget class="QLabel" name="desc_side15">
+           <property name="geometry">
+            <rect>
+             <x>192</x>
+             <y>50</y>
+             <width>61</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <family>Corbel</family>
+             <weight>50</weight>
+             <bold>false</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>B1</string>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="addBttn_bev1">
+           <property name="geometry">
+            <rect>
+             <x>459</x>
+             <y>80</y>
+             <width>93</width>
+             <height>28</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <family>Corbel</family>
+             <pointsize>12</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(66,72,40);
+color: rgb(255, 255, 255);</string>
+           </property>
+           <property name="text">
+            <string>Add</string>
+           </property>
+          </widget>
+         </widget>
+         <widget class="QWidget" name="foodBev2" native="true">
+          <property name="geometry">
+           <rect>
+            <x>40</x>
+            <y>213</y>
+            <width>580</width>
+            <height>133</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(231,234,218);</string>
+          </property>
+          <widget class="QLabel" name="pic_bev2">
+           <property name="geometry">
+            <rect>
+             <x>20</x>
+             <y>17</y>
+             <width>152</width>
+             <height>101</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(231,234,218);</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="pixmap">
+            <pixmap>food_pics/bottled water.png</pixmap>
+           </property>
+          </widget>
+          <widget class="QLabel" name="nameSide11">
+           <property name="geometry">
+            <rect>
+             <x>192</x>
+             <y>17</y>
+             <width>191</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <family>Corbel</family>
+             <pointsize>12</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>Bottled Mineral Water</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="jLabel37">
+           <property name="geometry">
+            <rect>
+             <x>190</x>
+             <y>80</y>
+             <width>61</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <family>Corbel</family>
+             <weight>50</weight>
+             <bold>false</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>Quantity</string>
+           </property>
+          </widget>
+          <widget class="QTextEdit" name="qtty_bev2">
+           <property name="geometry">
+            <rect>
+             <x>271</x>
+             <y>80</y>
+             <width>61</width>
+             <height>21</height>
+            </rect>
+           </property>
+           <property name="verticalScrollBarPolicy">
+            <enum>Qt::ScrollBarAlwaysOff</enum>
+           </property>
+          </widget>
+          <widget class="QLabel" name="jLabel56">
+           <property name="geometry">
+            <rect>
+             <x>470</x>
+             <y>17</y>
+             <width>31</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <family>Corbel</family>
+             <weight>50</weight>
+             <bold>false</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>Price</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="price_bev2">
+           <property name="geometry">
+            <rect>
+             <x>521</x>
+             <y>10</y>
+             <width>21</width>
+             <height>31</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <family>Corbel</family>
+             <pointsize>12</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>20</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="desc_side16">
+           <property name="geometry">
+            <rect>
+             <x>192</x>
+             <y>50</y>
+             <width>61</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <family>Corbel</family>
+             <weight>50</weight>
+             <bold>false</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>B2</string>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="addBttn_bev2">
+           <property name="geometry">
+            <rect>
+             <x>459</x>
+             <y>80</y>
+             <width>93</width>
+             <height>28</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <family>Corbel</family>
+             <pointsize>12</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(66,72,40);
+color: rgb(255, 255, 255);</string>
+           </property>
+           <property name="text">
+            <string>Add</string>
+           </property>
+          </widget>
+         </widget>
+         <widget class="QWidget" name="foodBev3" native="true">
+          <property name="geometry">
+           <rect>
+            <x>40</x>
+            <y>386</y>
+            <width>580</width>
+            <height>133</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(231,234,218);</string>
+          </property>
+          <widget class="QLabel" name="pic_bev3">
+           <property name="geometry">
+            <rect>
+             <x>20</x>
+             <y>17</y>
+             <width>152</width>
+             <height>101</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(231,234,218);</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="pixmap">
+            <pixmap>food_pics/orange juice.png</pixmap>
+           </property>
+          </widget>
+          <widget class="QLabel" name="nameSide12">
+           <property name="geometry">
+            <rect>
+             <x>192</x>
+             <y>17</y>
+             <width>161</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <family>Corbel</family>
+             <pointsize>12</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>Fresh Orange Juice</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="jLabel57">
+           <property name="geometry">
+            <rect>
+             <x>470</x>
+             <y>17</y>
+             <width>31</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <family>Corbel</family>
+             <weight>50</weight>
+             <bold>false</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>Price</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="price_bev3">
+           <property name="geometry">
+            <rect>
+             <x>521</x>
+             <y>10</y>
+             <width>21</width>
+             <height>31</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <family>Corbel</family>
+             <pointsize>12</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>55</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="jLabel38">
+           <property name="geometry">
+            <rect>
+             <x>190</x>
+             <y>80</y>
+             <width>61</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <family>Corbel</family>
+             <weight>50</weight>
+             <bold>false</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>Quantity</string>
+           </property>
+          </widget>
+          <widget class="QTextEdit" name="qtty_bev3">
+           <property name="geometry">
+            <rect>
+             <x>271</x>
+             <y>80</y>
+             <width>61</width>
+             <height>21</height>
+            </rect>
+           </property>
+           <property name="verticalScrollBarPolicy">
+            <enum>Qt::ScrollBarAlwaysOff</enum>
+           </property>
+          </widget>
+          <widget class="QLabel" name="desc_side17">
+           <property name="geometry">
+            <rect>
+             <x>192</x>
+             <y>50</y>
+             <width>61</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <family>Corbel</family>
+             <weight>50</weight>
+             <bold>false</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>B3</string>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="addBttn_bev3">
+           <property name="geometry">
+            <rect>
+             <x>459</x>
+             <y>80</y>
+             <width>93</width>
+             <height>28</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <family>Corbel</family>
+             <pointsize>12</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(66,72,40);
+color: rgb(255, 255, 255);</string>
+           </property>
+           <property name="text">
+            <string>Add</string>
+           </property>
+          </widget>
+         </widget>
+         <widget class="QWidget" name="foodBev4" native="true">
+          <property name="geometry">
+           <rect>
+            <x>40</x>
+            <y>559</y>
+            <width>580</width>
+            <height>133</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(231,234,218);</string>
+          </property>
+          <widget class="QLabel" name="pic_bev4">
+           <property name="geometry">
+            <rect>
+             <x>20</x>
+             <y>17</y>
+             <width>152</width>
+             <height>101</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(231,234,218);</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="pixmap">
+            <pixmap>food_pics/milkshake.png</pixmap>
+           </property>
+          </widget>
+          <widget class="QLabel" name="nameSide13">
+           <property name="geometry">
+            <rect>
+             <x>192</x>
+             <y>17</y>
+             <width>91</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <family>Corbel</family>
+             <pointsize>12</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>Milkshake</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="jLabel58">
+           <property name="geometry">
+            <rect>
+             <x>470</x>
+             <y>17</y>
+             <width>31</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <family>Corbel</family>
+             <weight>50</weight>
+             <bold>false</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>Price</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="price_bev4">
+           <property name="geometry">
+            <rect>
+             <x>521</x>
+             <y>10</y>
+             <width>21</width>
+             <height>31</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <family>Corbel</family>
+             <pointsize>12</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>80</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="jLabel39">
+           <property name="geometry">
+            <rect>
+             <x>190</x>
+             <y>80</y>
+             <width>61</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <family>Corbel</family>
+             <weight>50</weight>
+             <bold>false</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>Quantity</string>
+           </property>
+          </widget>
+          <widget class="QTextEdit" name="qtty_bev4">
+           <property name="geometry">
+            <rect>
+             <x>271</x>
+             <y>80</y>
+             <width>61</width>
+             <height>21</height>
+            </rect>
+           </property>
+           <property name="verticalScrollBarPolicy">
+            <enum>Qt::ScrollBarAlwaysOff</enum>
+           </property>
+          </widget>
+          <widget class="QLabel" name="desc_side18">
+           <property name="geometry">
+            <rect>
+             <x>192</x>
+             <y>50</y>
+             <width>61</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <family>Corbel</family>
+             <weight>50</weight>
+             <bold>false</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>B4</string>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="addBttn_bev4">
+           <property name="geometry">
+            <rect>
+             <x>459</x>
+             <y>80</y>
+             <width>93</width>
+             <height>28</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <family>Corbel</family>
+             <pointsize>12</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(66,72,40);
+color: rgb(255, 255, 255);</string>
+           </property>
+           <property name="text">
+            <string>Add</string>
+           </property>
+          </widget>
+         </widget>
+         <widget class="QWidget" name="foodBev5" native="true">
+          <property name="geometry">
+           <rect>
+            <x>40</x>
+            <y>732</y>
+            <width>580</width>
+            <height>133</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(231,234,218);</string>
+          </property>
+          <widget class="QLabel" name="pic_bev5">
+           <property name="geometry">
+            <rect>
+             <x>20</x>
+             <y>17</y>
+             <width>152</width>
+             <height>101</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(231,234,218);</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="pixmap">
+            <pixmap>food_pics/iced tea.png</pixmap>
+           </property>
+          </widget>
+          <widget class="QLabel" name="nameSide14">
+           <property name="geometry">
+            <rect>
+             <x>192</x>
+             <y>17</y>
+             <width>71</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <family>Corbel</family>
+             <pointsize>12</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>Iced Tea</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="jLabel40">
+           <property name="geometry">
+            <rect>
+             <x>190</x>
+             <y>80</y>
+             <width>61</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <family>Corbel</family>
+             <weight>50</weight>
+             <bold>false</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>Quantity</string>
+           </property>
+          </widget>
+          <widget class="QTextEdit" name="qtty_bev5">
+           <property name="geometry">
+            <rect>
+             <x>271</x>
+             <y>80</y>
+             <width>61</width>
+             <height>21</height>
+            </rect>
+           </property>
+           <property name="verticalScrollBarPolicy">
+            <enum>Qt::ScrollBarAlwaysOff</enum>
+           </property>
+          </widget>
+          <widget class="QLabel" name="jLabel59">
+           <property name="geometry">
+            <rect>
+             <x>470</x>
+             <y>17</y>
+             <width>31</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <family>Corbel</family>
+             <weight>50</weight>
+             <bold>false</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>Price</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="price_bev5">
+           <property name="geometry">
+            <rect>
+             <x>521</x>
+             <y>10</y>
+             <width>21</width>
+             <height>31</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <family>Corbel</family>
+             <pointsize>12</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>40</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="desc_side19">
+           <property name="geometry">
+            <rect>
+             <x>192</x>
+             <y>50</y>
+             <width>61</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <family>Corbel</family>
+             <weight>50</weight>
+             <bold>false</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>B5</string>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="addBttn_bev5">
+           <property name="geometry">
+            <rect>
+             <x>459</x>
+             <y>80</y>
+             <width>93</width>
+             <height>28</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <family>Corbel</family>
+             <pointsize>12</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(66,72,40);
+color: rgb(255, 255, 255);</string>
+           </property>
+           <property name="text">
+            <string>Add</string>
+           </property>
+          </widget>
+         </widget>
+        </widget>
+       </widget>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QScrollArea" name="scrollArea_4">
+   <property name="geometry">
+    <rect>
+     <x>640</x>
+     <y>260</y>
+     <width>511</width>
+     <height>881</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"> QScrollBar:vertical {
+	border: none;
+    background: rgb(247,241,232)
+ }</string>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::NoFrame</enum>
+   </property>
+   <property name="horizontalScrollBarPolicy">
+    <enum>Qt::ScrollBarAlwaysOff</enum>
+   </property>
+   <property name="widgetResizable">
+    <bool>true</bool>
+   </property>
+   <widget class="QWidget" name="scrollAreaWidgetContents_5">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>5018</width>
+      <height>1218</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout_4">
+     <item>
+      <widget class="QFrame" name="frame_3">
+       <property name="minimumSize">
+        <size>
+         <width>5000</width>
+         <height>1200</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true"/>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::StyledPanel</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Raised</enum>
+       </property>
+       <widget class="QTableWidget" name="ordersTable">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>520</width>
+          <height>901</height>
+         </rect>
+        </property>
+        <property name="autoFillBackground">
+         <bool>false</bool>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">margin: 3</string>
+        </property>
+        <column>
+         <property name="text">
+          <string>Code</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>New Column</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Price</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Quantity</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Amount</string>
+         </property>
+        </column>
+       </widget>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
