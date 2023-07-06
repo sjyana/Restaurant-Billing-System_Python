@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>520</width>
-    <height>459</height>
+    <width>1170</width>
+    <height>750</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -19,9 +19,9 @@
   <widget class="QPushButton" name="displayBttn">
    <property name="geometry">
     <rect>
-     <x>170</x>
-     <y>260</y>
-     <width>211</width>
+     <x>430</x>
+     <y>380</y>
+     <width>281</width>
      <height>61</height>
     </rect>
    </property>
@@ -50,8 +50,8 @@ color: rgb(247,241,232)</string>
   <widget class="QLabel" name="label_2">
    <property name="geometry">
     <rect>
-     <x>0</x>
-     <y>110</y>
+     <x>310</x>
+     <y>220</y>
      <width>521</width>
      <height>31</height>
     </rect>
@@ -80,8 +80,8 @@ color: rgb(247,241,232)</string>
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
-     <x>0</x>
-     <y>40</y>
+     <x>310</x>
+     <y>150</y>
      <width>521</width>
      <height>61</height>
     </rect>
@@ -90,7 +90,7 @@ color: rgb(247,241,232)</string>
     <string/>
    </property>
    <property name="pixmap">
-    <pixmap>../../../Pictures/icons/logo.PNG</pixmap>
+    <pixmap>pictures/logo.PNG</pixmap>
    </property>
    <property name="alignment">
     <set>Qt::AlignCenter</set>
@@ -99,9 +99,9 @@ color: rgb(247,241,232)</string>
   <widget class="QPushButton" name="adminbttn">
    <property name="geometry">
     <rect>
-     <x>170</x>
-     <y>340</y>
-     <width>211</width>
+     <x>430</x>
+     <y>460</y>
+     <width>281</width>
      <height>61</height>
     </rect>
    </property>
@@ -130,9 +130,9 @@ color: rgb(247,241,232)</string>
   <widget class="QPushButton" name="addbttn">
    <property name="geometry">
     <rect>
-     <x>170</x>
-     <y>180</y>
-     <width>211</width>
+     <x>430</x>
+     <y>300</y>
+     <width>281</width>
      <height>61</height>
     </rect>
    </property>
