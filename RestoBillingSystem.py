@@ -113,7 +113,7 @@ class MessageBox:
     def show_info_message_box(self, message):
         msg_box = QMessageBox()
         msg_box.setIcon(QMessageBox.Information)
-        msg_box.setWindowTitle("File saving")
+        msg_box.setWindowTitle("Information")
         msg_box.setText(message)
         msg_box.setStandardButtons(QMessageBox.Ok)
         msg_box.setDefaultButton(QMessageBox.Ok)
@@ -122,6 +122,23 @@ class MessageBox:
         button_ok.clicked.connect(msg_box.reject) 
 
         msg_box.exec_()
+    
+    def show_question_message_box(self, message):
+        msg_box = QMessageBox()
+        msg_box.setIcon(QMessageBox.Question)  # Updated line
+        msg_box.setWindowTitle("Confirmation")
+        msg_box.setText(message)
+        msg_box.setStandardButtons(QMessageBox.Yes | QMessageBox.No)
+        msg_box.setDefaultButton(QMessageBox.No)
+
+        button_yes = msg_box.button(QMessageBox.Yes)
+        button_no = msg_box.button(QMessageBox.No)
+        
+        if msg_box.exec_() == QMessageBox.Yes:  # Check the result of the message box
+            return True
+        else:
+            return False
+
 
 class FileHandling:
     def __init__(self):
@@ -144,6 +161,23 @@ class FileHandling:
         except IOError as ex:
             self.mssgBox.show_warning_message_box("Error appending to the file.")
     
+    def saveOrder(self):
+        file_name = "ordersData.txt"
+        
+        try:
+            with codecs.open(file_name, 'w', encoding='utf-8') as file:
+                for order_num, order_data in orders_data.items():
+                    order_info = f"{order_data['orderCode']},{order_data['name']},{order_data['date']},{order_data['time']},"
+                    order_info += f"{order_data['total']},{order_data['subtotal']},{order_data['vat']},{order_data['modeOfPayment']},"
+                    order_info += f"{order_data['M1']},{order_data['M2']},{order_data['M3']},{order_data['M4']},{order_data['M5']},"
+                    order_info += f"{order_data['S1']},{order_data['S2']},{order_data['S3']},{order_data['S4']},{order_data['S5']},"
+                    order_info += f"{order_data['D1']},{order_data['D2']},{order_data['D3']},{order_data['D4']},{order_data['D5']},"
+                    order_info += f"{order_data['B1']},{order_data['B2']},{order_data['B3']},{order_data['B4']},{order_data['B5']},{order_data['status']}"
+                    enc_data = self.encrypt(order_info, 20)
+                    file.write(enc_data + '\n')
+        except IOError as ex:
+            self.mssgBox.show_warning_message_box("Error writing to the file.")
+
     def RetrieveOrder(self):
         file_name = "ordersData.txt"
         self.addOrder = OrderManager()
@@ -156,7 +190,7 @@ class FileHandling:
                     if decrypted_data:
                         data = decrypted_data.split(',')
                         self.addOrder.add_order(orderNum,data[0],data[1],data[2],data[3],data[4],data[5],data[6],data[7],data[8],data[9],data[10],data[11],data[12],data[13],data[14],data[15],data[16],data[17],data[18],data[19],data[20],data[21],data[22],data[23],data[24],data[25],data[26],data[27],data[28])
-                        print(data)
+                        #print(data)
                         orderNum += 1
                     
         except IOError as ex:
@@ -433,10 +467,10 @@ class AddOrder(QDialog):
         totalAmt = float(sub + tax)
         if 'vat' not in orders_data:
             self.order.data['vat'] = tax
-        self.order.data['vat'] = tax
+        self.order.data['vat'] = "{:.2f}".format(tax)
         if 'total' not in orders_data:
             self.order.data['total'] = 0
-        self.order.data['total'] = totalAmt
+        self.order.data['total'] = "{:.2f}".format(totalAmt)
 
 class UserInfo(QDialog):
     def __init__(self):
@@ -469,9 +503,9 @@ class UserInfo(QDialog):
     def orderLabels(self):
         "{:.2f}".format
         self.lblOrderNum.setText(str(self.printValue('orderCode')))
-        self.lblSubTotal.setText("{:.2f}".format(self.printValue('subtotal')))
-        self.lblVat.setText("{:.2f}".format(self.printValue('vat')))
-        self.lblTotal.setText("{:.2f}".format(self.printValue('total')))
+        self.lblSubTotal.setText("{:.2f}".format(float(self.printValue('subtotal'))))
+        self.lblVat.setText("{:.2f}".format(float(self.printValue('vat'))))
+        self.lblTotal.setText("{:.2f}".format(float(self.printValue('total'))))
 
 
         self.lineEditM1.setText(str(self.printValue('M1')))
@@ -520,7 +554,7 @@ class UserInfo(QDialog):
         name_len = len(self.lineEditName.text())
         cash_len = len(self.lineEditCash.text())
         mop = self.comboBoxMOP.currentText()
-        amt = self.printValue('total')
+        amt = float(self.printValue('total'))
 
         if 'modeOfPayment' not in self.order.data:
             self.order.data['modeOfPayment'] = "none"
@@ -534,7 +568,7 @@ class UserInfo(QDialog):
             if cash_len == 0:
                 self.mssgBox.show_warning_message_box("Please enter cash.")
             else:
-                cash = int(self.lineEditCash.text())
+                cash = float(self.lineEditCash.text())
                 if cash < amt:
                     self.mssgBox.show_warning_message_box("Insufficient cash.")
                     self.lineEditCash.setText('')
@@ -559,7 +593,7 @@ class UserInfo(QDialog):
                 self.order.data['name'] = "none"
             self.order.data['name'] = cust_name
             self.file.appendOrder()
-            self.mssgBox.show_info_message_box("save.") 
+            self.mssgBox.show_info_message_box("Order has been successfully saved.") 
             self.gotoMenu()
             
     def gotoMenu(self):
@@ -573,26 +607,131 @@ class DisplayAllOrders(QDialog):
         super(DisplayAllOrders,self).__init__()
         self.widget=QtWidgets.QStackedWidget()
         loadUi("DisplayAllOrder.ui",self)
-
-        self.file = FileHandling()
         self.order = Orders()
+        self.file = FileHandling()
         self.mssgBox = MessageBox()
-        self.file.RetrieveOrder()
         self.allocateTable()
+        self.orderList.itemSelectionChanged.connect(self.display_selected_order)
+        self.pushbuttonUpdate.clicked.connect(self.updateStatus)
+        self.pushbuttonDelete.clicked.connect(self.deleteOrder)
+        self.pushbuttonMenu.clicked.connect(self.gotoMenu)
 
     def allocateTable(self):
-        #self.allocate = self.orderList
+        self.file.RetrieveOrder()
         if not self.order.data:
             self.mssgBox.show_info_message_box("No orders found.")
         else:
-            for orderNum, order_data in self.order.data.items():
+            overallTotal = float(0)
+            for orderNum, order_data in self.order.data.items():    
                 item = QTreeWidgetItem()  # Create a new QTreeWidgetItem
                 for column, (key, value) in enumerate(order_data.items()):
                     item.setText(column, str(value))  # Set the text for each column
-                    
+                    if key == 'total':
+                        value = float(value)
+                        overallTotal += value
                 self.orderList.addTopLevelItem(item)  # Add the item to the tree widget
+            self.TAOlbl_2.setText("{:.2f}".format(overallTotal))
+    
+    def display_selected_order(self):
+        #"{:.2f}".format
+        selected_items = self.orderList.selectedItems()
+        self.initialize_orderText()
+        if len(selected_items) > 0:
+            selected_item = selected_items[0]
+            selected_order = [selected_item.text(column) for column in range(self.orderList.columnCount())]
+            self.lblOrder.setText(str(selected_order[0]))
+            self.lblName.setText(selected_order[1])
+            self.lblDate.setText(selected_order[2])
+            self.lblTime.setText(selected_order[3])
+            self.lblSub.setText("{:.2f}".format(float(selected_order[4])))
+            self.lblTotal.setText("{:.2f}".format(float(selected_order[5])))
+            self.lblVat.setText("{:.2f}".format(float(selected_order[6])))
+            self.lblMop.setText(selected_order[7])
+            self.lineEditM1.setText(str(selected_order[8]))
+            self.lineEditM2.setText(str(selected_order[9]))
+            self.lineEditM3.setText(str(selected_order[10]))
+            self.lineEditM4.setText(str(selected_order[11]))
+            self.lineEditM5.setText(str(selected_order[12]))
+            self.lineEditS1.setText(str(selected_order[13]))
+            self.lineEditS2.setText(str(selected_order[14]))
+            self.lineEditS3.setText(str(selected_order[15]))
+            self.lineEditS4.setText(str(selected_order[16]))
+            self.lineEditS5.setText(str(selected_order[17]))
+            self.lineEditD1.setText(str(selected_order[18]))
+            self.lineEditD2.setText(str(selected_order[19]))
+            self.lineEditD3.setText(str(selected_order[20]))
+            self.lineEditD4.setText(str(selected_order[21]))
+            self.lineEditD5.setText(str(selected_order[22]))
+            self.lineEditB1.setText(str(selected_order[23]))
+            self.lineEditB2.setText(str(selected_order[24]))
+            self.lineEditB3.setText(str(selected_order[25]))
+            self.lineEditB4.setText(str(selected_order[26]))
+            self.lineEditB5.setText(str(selected_order[27]))
+            self.lblStatus.setText(selected_order[28])
+
+    def initialize_orderText(self):
+        self.lineEditM1.setText('')
+        self.lineEditM2.setText('')
+        self.lineEditM3.setText('')
+        self.lineEditM4.setText('')
+        self.lineEditM5.setText('')
+        self.lineEditS1.setText('')
+        self.lineEditS2.setText('')
+        self.lineEditS3.setText('')
+        self.lineEditS4.setText('')
+        self.lineEditS5.setText('')
+        self.lineEditD1.setText('')
+        self.lineEditD2.setText('')
+        self.lineEditD3.setText('')
+        self.lineEditD4.setText('')
+        self.lineEditD5.setText('')
+        self.lineEditB1.setText('')
+        self.lineEditB2.setText('')
+        self.lineEditB3.setText('')
+        self.lineEditB4.setText('')
+        self.lineEditB5.setText('')
+
+    def updateStatus(self):
+        selected_items = self.orderList.selectedItems()
+        if len(selected_items) > 0:
+            selected_item = selected_items[0]
+            orderNum = self.orderList.indexOfTopLevelItem(selected_item) + 1
+            if orderNum in self.order.data:
+                if self.order.data[orderNum]['status'] == 'Pending':
+                    self.order.data[orderNum]['status'] = 'Complete'
+                    selected_item.setText(28, 'Complete')
+                    self.lblStatus.setText("Complete")
+                else:
+                    self.order.data[orderNum]['status'] = 'Pending'
+                    selected_item.setText(28, 'Pending')
+                    self.lblStatus.setText("Pending")
+            self.file.saveOrder()
+            self.mssgBox.show_info_message_box("Status updated.")
+        else:
+            self.mssgBox.show_warning_message_box("Please select an order.")
+    
+    def deleteOrder(self):
+        selected_items = self.orderList.selectedItems()
+        if len(selected_items) > 0:
+            selected_item = selected_items[0]
+            orderNum = self.orderList.indexOfTopLevelItem(selected_item) + 1
+            row_index = self.orderList.indexOfTopLevelItem(selected_item)
+            reply = self.mssgBox.show_question_message_box("Are you sure to delete this order?")
+            if reply:
+                # Delete the selected item from the QTreeWidget
+                self.orderList.takeTopLevelItem(row_index)
+                if orderNum in self.order.data:
+                    del self.order.data[orderNum]
+                    self.file.saveOrder()
+        else:
+            self.mssgBox.show_warning_message_box("Please select an order.")
         
-        
+
+    def gotoMenu(self):
+        nxtForm = Menu()
+        widget.addWidget(nxtForm)
+        widget.setCurrentIndex(widget.currentIndex()+1)
+                
 
 app=QApplication(sys.argv)
 widget=QtWidgets.QStackedWidget()
