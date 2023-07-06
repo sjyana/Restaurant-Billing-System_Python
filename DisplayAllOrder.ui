@@ -29,7 +29,7 @@
     <string/>
    </property>
    <property name="pixmap">
-    <pixmap>../../PL Project-Java/Programming-Language-Project-Java-Project/src/pictures/logo.PNG</pixmap>
+    <pixmap>pictures/logo.PNG</pixmap>
    </property>
    <property name="alignment">
     <set>Qt::AlignCenter</set>
@@ -68,10 +68,10 @@
   <widget class="QWidget" name="widget" native="true">
    <property name="geometry">
     <rect>
-     <x>0</x>
+     <x>9</x>
      <y>160</y>
-     <width>1170</width>
-     <height>201</height>
+     <width>1151</width>
+     <height>211</height>
     </rect>
    </property>
    <property name="font">
@@ -83,14 +83,14 @@
     </font>
    </property>
    <property name="styleSheet">
-    <string notr="true">border-color: rgb(213, 91, 68);</string>
+    <string notr="true">border: 3px solid rgb(213, 91, 68);</string>
    </property>
    <widget class="QLabel" name="orderLBL">
     <property name="geometry">
      <rect>
-      <x>30</x>
-      <y>30</y>
-      <width>130</width>
+      <x>9</x>
+      <y>20</y>
+      <width>141</width>
       <height>30</height>
      </rect>
     </property>
@@ -102,6 +102,9 @@
       <bold>true</bold>
      </font>
     </property>
+    <property name="styleSheet">
+     <string notr="true">border: none</string>
+    </property>
     <property name="text">
      <string>Order Number:</string>
     </property>
@@ -112,8 +115,8 @@
    <widget class="QLabel" name="lblOrder">
     <property name="geometry">
      <rect>
-      <x>170</x>
-      <y>30</y>
+      <x>160</x>
+      <y>20</y>
       <width>130</width>
       <height>30</height>
      </rect>
@@ -125,6 +128,9 @@
       <weight>75</weight>
       <bold>true</bold>
      </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border: none</string>
     </property>
     <property name="text">
      <string/>
@@ -147,6 +153,9 @@
       <bold>true</bold>
      </font>
     </property>
+    <property name="styleSheet">
+     <string notr="true">border: none</string>
+    </property>
     <property name="text">
      <string>Customer's Name:</string>
     </property>
@@ -157,7 +166,7 @@
    <widget class="QLabel" name="lblName">
     <property name="geometry">
      <rect>
-      <x>170</x>
+      <x>160</x>
       <y>60</y>
       <width>130</width>
       <height>30</height>
@@ -171,6 +180,9 @@
       <bold>true</bold>
      </font>
     </property>
+    <property name="styleSheet">
+     <string notr="true">border: none</string>
+    </property>
     <property name="text">
      <string/>
     </property>
@@ -179,7 +191,7 @@
     <property name="geometry">
      <rect>
       <x>20</x>
-      <y>90</y>
+      <y>100</y>
       <width>130</width>
       <height>30</height>
      </rect>
@@ -191,6 +203,9 @@
       <weight>75</weight>
       <bold>true</bold>
      </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border: none</string>
     </property>
     <property name="text">
      <string>Date:</string>
@@ -202,8 +217,8 @@
    <widget class="QLabel" name="lblDate">
     <property name="geometry">
      <rect>
-      <x>170</x>
-      <y>90</y>
+      <x>160</x>
+      <y>100</y>
       <width>130</width>
       <height>30</height>
      </rect>
@@ -216,6 +231,9 @@
       <bold>true</bold>
      </font>
     </property>
+    <property name="styleSheet">
+     <string notr="true">border: none</string>
+    </property>
     <property name="text">
      <string/>
     </property>
@@ -224,7 +242,7 @@
     <property name="geometry">
      <rect>
       <x>20</x>
-      <y>120</y>
+      <y>140</y>
       <width>130</width>
       <height>30</height>
      </rect>
@@ -237,6 +255,9 @@
       <bold>true</bold>
      </font>
     </property>
+    <property name="styleSheet">
+     <string notr="true">border: none</string>
+    </property>
     <property name="text">
      <string>Time:</string>
     </property>
@@ -247,8 +268,8 @@
    <widget class="QLabel" name="lblTime">
     <property name="geometry">
      <rect>
-      <x>170</x>
-      <y>120</y>
+      <x>160</x>
+      <y>140</y>
       <width>130</width>
       <height>30</height>
      </rect>
@@ -260,6 +281,9 @@
       <weight>75</weight>
       <bold>true</bold>
      </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border: none</string>
     </property>
     <property name="text">
      <string/>
@@ -268,8 +292,8 @@
    <widget class="QLabel" name="lblMop">
     <property name="geometry">
      <rect>
-      <x>170</x>
-      <y>150</y>
+      <x>160</x>
+      <y>170</y>
       <width>130</width>
       <height>30</height>
      </rect>
@@ -282,6 +306,9 @@
       <bold>true</bold>
      </font>
     </property>
+    <property name="styleSheet">
+     <string notr="true">border: none</string>
+    </property>
     <property name="text">
      <string/>
     </property>
@@ -289,8 +316,8 @@
    <widget class="QLabel" name="mopLBL">
     <property name="geometry">
      <rect>
-      <x>10</x>
-      <y>150</y>
+      <x>20</x>
+      <y>170</y>
       <width>130</width>
       <height>30</height>
      </rect>
@@ -303,6 +330,9 @@
       <bold>true</bold>
      </font>
     </property>
+    <property name="styleSheet">
+     <string notr="true">border: none</string>
+    </property>
     <property name="text">
      <string>Mode of Payment:</string>
     </property>
@@ -313,9 +343,9 @@
    <widget class="QLabel" name="subLBL">
     <property name="geometry">
      <rect>
-      <x>360</x>
+      <x>350</x>
       <y>30</y>
-      <width>80</width>
+      <width>91</width>
       <height>30</height>
      </rect>
     </property>
@@ -326,6 +356,9 @@
       <weight>75</weight>
       <bold>true</bold>
      </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border: none</string>
     </property>
     <property name="text">
      <string>Subtotal:</string>
@@ -351,6 +384,9 @@
       <bold>true</bold>
      </font>
     </property>
+    <property name="styleSheet">
+     <string notr="true">border: none</string>
+    </property>
     <property name="text">
      <string/>
     </property>
@@ -358,9 +394,9 @@
    <widget class="QLabel" name="vatLBL">
     <property name="geometry">
      <rect>
-      <x>360</x>
+      <x>350</x>
       <y>70</y>
-      <width>80</width>
+      <width>91</width>
       <height>30</height>
      </rect>
     </property>
@@ -371,6 +407,9 @@
       <weight>75</weight>
       <bold>true</bold>
      </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border: none</string>
     </property>
     <property name="text">
      <string>12% VAT:</string>
@@ -396,6 +435,9 @@
       <bold>true</bold>
      </font>
     </property>
+    <property name="styleSheet">
+     <string notr="true">border: none</string>
+    </property>
     <property name="text">
      <string/>
     </property>
@@ -417,6 +459,9 @@
       <bold>true</bold>
      </font>
     </property>
+    <property name="styleSheet">
+     <string notr="true">border: none</string>
+    </property>
     <property name="text">
      <string/>
     </property>
@@ -424,9 +469,9 @@
    <widget class="QLabel" name="totalLBL">
     <property name="geometry">
      <rect>
-      <x>320</x>
+      <x>310</x>
       <y>110</y>
-      <width>120</width>
+      <width>131</width>
       <height>30</height>
      </rect>
     </property>
@@ -437,6 +482,9 @@
       <weight>75</weight>
       <bold>true</bold>
      </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border: none</string>
     </property>
     <property name="text">
      <string>Total Amount:</string>
@@ -462,6 +510,9 @@
       <bold>true</bold>
      </font>
     </property>
+    <property name="styleSheet">
+     <string notr="true">border: none</string>
+    </property>
     <property name="text">
      <string/>
     </property>
@@ -483,6 +534,9 @@
       <bold>true</bold>
      </font>
     </property>
+    <property name="styleSheet">
+     <string notr="true">border: none</string>
+    </property>
     <property name="text">
      <string>Status:</string>
     </property>
@@ -493,22 +547,22 @@
    <widget class="QWidget" name="widgetMD" native="true">
     <property name="geometry">
      <rect>
-      <x>580</x>
+      <x>570</x>
       <y>40</y>
-      <width>130</width>
-      <height>150</height>
+      <width>131</width>
+      <height>161</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">border-color: rgb(66, 72, 40);</string>
+     <string notr="true">border:2px solid rgb(66, 72, 40);</string>
     </property>
     <widget class="QLabel" name="label">
      <property name="geometry">
       <rect>
        <x>10</x>
-       <y>0</y>
-       <width>47</width>
-       <height>13</height>
+       <y>10</y>
+       <width>31</width>
+       <height>21</height>
       </rect>
      </property>
      <property name="font">
@@ -518,6 +572,9 @@
        <weight>75</weight>
        <bold>true</bold>
       </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border: 0px</string>
      </property>
      <property name="text">
       <string>M1</string>
@@ -530,9 +587,9 @@
      <property name="geometry">
       <rect>
        <x>10</x>
-       <y>30</y>
-       <width>47</width>
-       <height>13</height>
+       <y>40</y>
+       <width>31</width>
+       <height>21</height>
       </rect>
      </property>
      <property name="font">
@@ -542,6 +599,9 @@
        <weight>75</weight>
        <bold>true</bold>
       </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border: 0px</string>
      </property>
      <property name="text">
       <string>M2</string>
@@ -553,11 +613,14 @@
     <widget class="QLineEdit" name="lineEditM1">
      <property name="geometry">
       <rect>
-       <x>60</x>
-       <y>0</y>
+       <x>50</x>
+       <y>10</y>
        <width>59</width>
        <height>23</height>
       </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border: 1px solid gray</string>
      </property>
      <property name="alignment">
       <set>Qt::AlignCenter</set>
@@ -566,11 +629,14 @@
     <widget class="QLineEdit" name="lineEditM2">
      <property name="geometry">
       <rect>
-       <x>60</x>
-       <y>30</y>
+       <x>50</x>
+       <y>40</y>
        <width>59</width>
        <height>23</height>
       </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border: 1px solid gray</string>
      </property>
      <property name="alignment">
       <set>Qt::AlignCenter</set>
@@ -579,11 +645,14 @@
     <widget class="QLineEdit" name="lineEditM3">
      <property name="geometry">
       <rect>
-       <x>60</x>
-       <y>60</y>
+       <x>50</x>
+       <y>70</y>
        <width>59</width>
        <height>23</height>
       </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border: 1px solid gray</string>
      </property>
      <property name="alignment">
       <set>Qt::AlignCenter</set>
@@ -592,11 +661,14 @@
     <widget class="QLineEdit" name="lineEditM4">
      <property name="geometry">
       <rect>
-       <x>60</x>
-       <y>90</y>
+       <x>50</x>
+       <y>100</y>
        <width>59</width>
        <height>23</height>
       </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border: 1px solid gray</string>
      </property>
      <property name="alignment">
       <set>Qt::AlignCenter</set>
@@ -605,11 +677,14 @@
     <widget class="QLineEdit" name="lineEditM5">
      <property name="geometry">
       <rect>
-       <x>60</x>
-       <y>120</y>
+       <x>50</x>
+       <y>130</y>
        <width>59</width>
        <height>23</height>
       </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border: 1px solid gray</string>
      </property>
      <property name="alignment">
       <set>Qt::AlignCenter</set>
@@ -619,9 +694,9 @@
      <property name="geometry">
       <rect>
        <x>10</x>
-       <y>60</y>
-       <width>47</width>
-       <height>13</height>
+       <y>70</y>
+       <width>31</width>
+       <height>21</height>
       </rect>
      </property>
      <property name="font">
@@ -631,6 +706,9 @@
        <weight>75</weight>
        <bold>true</bold>
       </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border: 0px</string>
      </property>
      <property name="text">
       <string>M3</string>
@@ -643,9 +721,9 @@
      <property name="geometry">
       <rect>
        <x>10</x>
-       <y>90</y>
-       <width>47</width>
-       <height>13</height>
+       <y>100</y>
+       <width>31</width>
+       <height>21</height>
       </rect>
      </property>
      <property name="font">
@@ -655,6 +733,9 @@
        <weight>75</weight>
        <bold>true</bold>
       </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border: 0px</string>
      </property>
      <property name="text">
       <string>M4</string>
@@ -667,9 +748,9 @@
      <property name="geometry">
       <rect>
        <x>10</x>
-       <y>120</y>
-       <width>47</width>
-       <height>13</height>
+       <y>130</y>
+       <width>31</width>
+       <height>21</height>
       </rect>
      </property>
      <property name="font">
@@ -679,6 +760,9 @@
        <weight>75</weight>
        <bold>true</bold>
       </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border: 0px</string>
      </property>
      <property name="text">
       <string>M5</string>
@@ -688,607 +772,13 @@
      </property>
     </widget>
    </widget>
-   <widget class="QWidget" name="widgetS" native="true">
-    <property name="geometry">
-     <rect>
-      <x>710</x>
-      <y>40</y>
-      <width>130</width>
-      <height>150</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">border-color: rgb(66, 72, 40);</string>
-    </property>
-    <widget class="QLabel" name="label_6">
-     <property name="geometry">
-      <rect>
-       <x>10</x>
-       <y>0</y>
-       <width>47</width>
-       <height>13</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>Corbel</family>
-       <pointsize>9</pointsize>
-       <weight>75</weight>
-       <bold>true</bold>
-      </font>
-     </property>
-     <property name="text">
-      <string>S1</string>
-     </property>
-     <property name="alignment">
-      <set>Qt::AlignCenter</set>
-     </property>
-    </widget>
-    <widget class="QLabel" name="label_7">
-     <property name="geometry">
-      <rect>
-       <x>10</x>
-       <y>30</y>
-       <width>47</width>
-       <height>13</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>Corbel</family>
-       <pointsize>9</pointsize>
-       <weight>75</weight>
-       <bold>true</bold>
-      </font>
-     </property>
-     <property name="text">
-      <string>S2</string>
-     </property>
-     <property name="alignment">
-      <set>Qt::AlignCenter</set>
-     </property>
-    </widget>
-    <widget class="QLineEdit" name="lineEditS1">
-     <property name="geometry">
-      <rect>
-       <x>60</x>
-       <y>0</y>
-       <width>59</width>
-       <height>23</height>
-      </rect>
-     </property>
-     <property name="alignment">
-      <set>Qt::AlignCenter</set>
-     </property>
-    </widget>
-    <widget class="QLineEdit" name="lineEditS2">
-     <property name="geometry">
-      <rect>
-       <x>60</x>
-       <y>30</y>
-       <width>59</width>
-       <height>23</height>
-      </rect>
-     </property>
-     <property name="alignment">
-      <set>Qt::AlignCenter</set>
-     </property>
-    </widget>
-    <widget class="QLineEdit" name="lineEditS3">
-     <property name="geometry">
-      <rect>
-       <x>60</x>
-       <y>60</y>
-       <width>59</width>
-       <height>23</height>
-      </rect>
-     </property>
-     <property name="alignment">
-      <set>Qt::AlignCenter</set>
-     </property>
-    </widget>
-    <widget class="QLineEdit" name="lineEditS4">
-     <property name="geometry">
-      <rect>
-       <x>60</x>
-       <y>90</y>
-       <width>59</width>
-       <height>23</height>
-      </rect>
-     </property>
-     <property name="alignment">
-      <set>Qt::AlignCenter</set>
-     </property>
-    </widget>
-    <widget class="QLineEdit" name="lineEditS5">
-     <property name="geometry">
-      <rect>
-       <x>60</x>
-       <y>120</y>
-       <width>59</width>
-       <height>23</height>
-      </rect>
-     </property>
-     <property name="alignment">
-      <set>Qt::AlignCenter</set>
-     </property>
-    </widget>
-    <widget class="QLabel" name="label_8">
-     <property name="geometry">
-      <rect>
-       <x>10</x>
-       <y>60</y>
-       <width>47</width>
-       <height>13</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>Corbel</family>
-       <pointsize>9</pointsize>
-       <weight>75</weight>
-       <bold>true</bold>
-      </font>
-     </property>
-     <property name="text">
-      <string>S3</string>
-     </property>
-     <property name="alignment">
-      <set>Qt::AlignCenter</set>
-     </property>
-    </widget>
-    <widget class="QLabel" name="label_9">
-     <property name="geometry">
-      <rect>
-       <x>10</x>
-       <y>90</y>
-       <width>47</width>
-       <height>13</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>Corbel</family>
-       <pointsize>9</pointsize>
-       <weight>75</weight>
-       <bold>true</bold>
-      </font>
-     </property>
-     <property name="text">
-      <string>S4</string>
-     </property>
-     <property name="alignment">
-      <set>Qt::AlignCenter</set>
-     </property>
-    </widget>
-    <widget class="QLabel" name="label_10">
-     <property name="geometry">
-      <rect>
-       <x>10</x>
-       <y>120</y>
-       <width>47</width>
-       <height>13</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>Corbel</family>
-       <pointsize>9</pointsize>
-       <weight>75</weight>
-       <bold>true</bold>
-      </font>
-     </property>
-     <property name="text">
-      <string>S5</string>
-     </property>
-     <property name="alignment">
-      <set>Qt::AlignCenter</set>
-     </property>
-    </widget>
-   </widget>
-   <widget class="QWidget" name="widgetD" native="true">
-    <property name="geometry">
-     <rect>
-      <x>850</x>
-      <y>40</y>
-      <width>130</width>
-      <height>150</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">border-color: rgb(66, 72, 40);</string>
-    </property>
-    <widget class="QLabel" name="label_11">
-     <property name="geometry">
-      <rect>
-       <x>10</x>
-       <y>0</y>
-       <width>47</width>
-       <height>13</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>Corbel</family>
-       <pointsize>9</pointsize>
-       <weight>75</weight>
-       <bold>true</bold>
-      </font>
-     </property>
-     <property name="text">
-      <string>D1</string>
-     </property>
-     <property name="alignment">
-      <set>Qt::AlignCenter</set>
-     </property>
-    </widget>
-    <widget class="QLabel" name="label_12">
-     <property name="geometry">
-      <rect>
-       <x>10</x>
-       <y>30</y>
-       <width>47</width>
-       <height>13</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>Corbel</family>
-       <pointsize>9</pointsize>
-       <weight>75</weight>
-       <bold>true</bold>
-      </font>
-     </property>
-     <property name="text">
-      <string>D2</string>
-     </property>
-     <property name="alignment">
-      <set>Qt::AlignCenter</set>
-     </property>
-    </widget>
-    <widget class="QLineEdit" name="lineEditD1">
-     <property name="geometry">
-      <rect>
-       <x>60</x>
-       <y>0</y>
-       <width>59</width>
-       <height>23</height>
-      </rect>
-     </property>
-     <property name="alignment">
-      <set>Qt::AlignCenter</set>
-     </property>
-    </widget>
-    <widget class="QLineEdit" name="lineEditD2">
-     <property name="geometry">
-      <rect>
-       <x>60</x>
-       <y>30</y>
-       <width>59</width>
-       <height>23</height>
-      </rect>
-     </property>
-     <property name="alignment">
-      <set>Qt::AlignCenter</set>
-     </property>
-    </widget>
-    <widget class="QLineEdit" name="lineEditD3">
-     <property name="geometry">
-      <rect>
-       <x>60</x>
-       <y>60</y>
-       <width>59</width>
-       <height>23</height>
-      </rect>
-     </property>
-     <property name="alignment">
-      <set>Qt::AlignCenter</set>
-     </property>
-    </widget>
-    <widget class="QLineEdit" name="lineEditD4">
-     <property name="geometry">
-      <rect>
-       <x>60</x>
-       <y>90</y>
-       <width>59</width>
-       <height>23</height>
-      </rect>
-     </property>
-     <property name="alignment">
-      <set>Qt::AlignCenter</set>
-     </property>
-    </widget>
-    <widget class="QLineEdit" name="lineEditD5">
-     <property name="geometry">
-      <rect>
-       <x>60</x>
-       <y>120</y>
-       <width>59</width>
-       <height>23</height>
-      </rect>
-     </property>
-     <property name="alignment">
-      <set>Qt::AlignCenter</set>
-     </property>
-    </widget>
-    <widget class="QLabel" name="label_13">
-     <property name="geometry">
-      <rect>
-       <x>10</x>
-       <y>60</y>
-       <width>47</width>
-       <height>13</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>Corbel</family>
-       <pointsize>9</pointsize>
-       <weight>75</weight>
-       <bold>true</bold>
-      </font>
-     </property>
-     <property name="text">
-      <string>D3</string>
-     </property>
-     <property name="alignment">
-      <set>Qt::AlignCenter</set>
-     </property>
-    </widget>
-    <widget class="QLabel" name="label_14">
-     <property name="geometry">
-      <rect>
-       <x>10</x>
-       <y>90</y>
-       <width>47</width>
-       <height>13</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>Corbel</family>
-       <pointsize>9</pointsize>
-       <weight>75</weight>
-       <bold>true</bold>
-      </font>
-     </property>
-     <property name="text">
-      <string>D4</string>
-     </property>
-     <property name="alignment">
-      <set>Qt::AlignCenter</set>
-     </property>
-    </widget>
-    <widget class="QLabel" name="label_15">
-     <property name="geometry">
-      <rect>
-       <x>10</x>
-       <y>120</y>
-       <width>47</width>
-       <height>13</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>Corbel</family>
-       <pointsize>9</pointsize>
-       <weight>75</weight>
-       <bold>true</bold>
-      </font>
-     </property>
-     <property name="text">
-      <string>D5</string>
-     </property>
-     <property name="alignment">
-      <set>Qt::AlignCenter</set>
-     </property>
-    </widget>
-   </widget>
-   <widget class="QWidget" name="widgetB" native="true">
-    <property name="geometry">
-     <rect>
-      <x>990</x>
-      <y>40</y>
-      <width>130</width>
-      <height>150</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">border-color: rgb(66, 72, 40);</string>
-    </property>
-    <widget class="QLabel" name="label_16">
-     <property name="geometry">
-      <rect>
-       <x>10</x>
-       <y>0</y>
-       <width>47</width>
-       <height>13</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>Corbel</family>
-       <pointsize>9</pointsize>
-       <weight>75</weight>
-       <bold>true</bold>
-      </font>
-     </property>
-     <property name="text">
-      <string>B1</string>
-     </property>
-     <property name="alignment">
-      <set>Qt::AlignCenter</set>
-     </property>
-    </widget>
-    <widget class="QLabel" name="label_17">
-     <property name="geometry">
-      <rect>
-       <x>10</x>
-       <y>30</y>
-       <width>47</width>
-       <height>13</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>Corbel</family>
-       <pointsize>9</pointsize>
-       <weight>75</weight>
-       <bold>true</bold>
-      </font>
-     </property>
-     <property name="text">
-      <string>B2</string>
-     </property>
-     <property name="alignment">
-      <set>Qt::AlignCenter</set>
-     </property>
-    </widget>
-    <widget class="QLineEdit" name="lineEditB1">
-     <property name="geometry">
-      <rect>
-       <x>60</x>
-       <y>0</y>
-       <width>59</width>
-       <height>23</height>
-      </rect>
-     </property>
-     <property name="alignment">
-      <set>Qt::AlignCenter</set>
-     </property>
-    </widget>
-    <widget class="QLineEdit" name="lineEditB2">
-     <property name="geometry">
-      <rect>
-       <x>60</x>
-       <y>30</y>
-       <width>59</width>
-       <height>23</height>
-      </rect>
-     </property>
-     <property name="alignment">
-      <set>Qt::AlignCenter</set>
-     </property>
-    </widget>
-    <widget class="QLineEdit" name="lineEditB3">
-     <property name="geometry">
-      <rect>
-       <x>60</x>
-       <y>60</y>
-       <width>59</width>
-       <height>23</height>
-      </rect>
-     </property>
-     <property name="alignment">
-      <set>Qt::AlignCenter</set>
-     </property>
-    </widget>
-    <widget class="QLineEdit" name="lineEditB4">
-     <property name="geometry">
-      <rect>
-       <x>60</x>
-       <y>90</y>
-       <width>59</width>
-       <height>23</height>
-      </rect>
-     </property>
-     <property name="alignment">
-      <set>Qt::AlignCenter</set>
-     </property>
-    </widget>
-    <widget class="QLineEdit" name="lineEditB5">
-     <property name="geometry">
-      <rect>
-       <x>60</x>
-       <y>120</y>
-       <width>59</width>
-       <height>23</height>
-      </rect>
-     </property>
-     <property name="alignment">
-      <set>Qt::AlignCenter</set>
-     </property>
-    </widget>
-    <widget class="QLabel" name="label_18">
-     <property name="geometry">
-      <rect>
-       <x>10</x>
-       <y>60</y>
-       <width>47</width>
-       <height>13</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>Corbel</family>
-       <pointsize>9</pointsize>
-       <weight>75</weight>
-       <bold>true</bold>
-      </font>
-     </property>
-     <property name="text">
-      <string>B3</string>
-     </property>
-     <property name="alignment">
-      <set>Qt::AlignCenter</set>
-     </property>
-    </widget>
-    <widget class="QLabel" name="label_19">
-     <property name="geometry">
-      <rect>
-       <x>10</x>
-       <y>90</y>
-       <width>47</width>
-       <height>13</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>Corbel</family>
-       <pointsize>9</pointsize>
-       <weight>75</weight>
-       <bold>true</bold>
-      </font>
-     </property>
-     <property name="text">
-      <string>B4</string>
-     </property>
-     <property name="alignment">
-      <set>Qt::AlignCenter</set>
-     </property>
-    </widget>
-    <widget class="QLabel" name="label_20">
-     <property name="geometry">
-      <rect>
-       <x>10</x>
-       <y>120</y>
-       <width>47</width>
-       <height>13</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>Corbel</family>
-       <pointsize>9</pointsize>
-       <weight>75</weight>
-       <bold>true</bold>
-      </font>
-     </property>
-     <property name="text">
-      <string>B5</string>
-     </property>
-     <property name="alignment">
-      <set>Qt::AlignCenter</set>
-     </property>
-    </widget>
-   </widget>
    <widget class="QLabel" name="MDlbl">
     <property name="geometry">
      <rect>
-      <x>570</x>
-      <y>10</y>
-      <width>130</width>
-      <height>30</height>
+      <x>569</x>
+      <y>9</y>
+      <width>131</width>
+      <height>21</height>
      </rect>
     </property>
     <property name="font">
@@ -1298,6 +788,9 @@
       <weight>75</weight>
       <bold>true</bold>
      </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border: none</string>
     </property>
     <property name="text">
      <string>Main Dishes</string>
@@ -1312,7 +805,7 @@
       <x>710</x>
       <y>10</y>
       <width>130</width>
-      <height>30</height>
+      <height>21</height>
      </rect>
     </property>
     <property name="font">
@@ -1322,6 +815,9 @@
       <weight>75</weight>
       <bold>true</bold>
      </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border: none</string>
     </property>
     <property name="text">
      <string>Sides</string>
@@ -1336,7 +832,7 @@
       <x>850</x>
       <y>10</y>
       <width>130</width>
-      <height>30</height>
+      <height>21</height>
      </rect>
     </property>
     <property name="font">
@@ -1346,6 +842,9 @@
       <weight>75</weight>
       <bold>true</bold>
      </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border: none</string>
     </property>
     <property name="text">
      <string>Desserts</string>
@@ -1360,7 +859,7 @@
       <x>990</x>
       <y>10</y>
       <width>130</width>
-      <height>30</height>
+      <height>21</height>
      </rect>
     </property>
     <property name="font">
@@ -1371,6 +870,9 @@
       <bold>true</bold>
      </font>
     </property>
+    <property name="styleSheet">
+     <string notr="true">border: none</string>
+    </property>
     <property name="text">
      <string>Beverages</string>
     </property>
@@ -1378,21 +880,708 @@
      <set>Qt::AlignCenter</set>
     </property>
    </widget>
+   <widget class="QWidget" name="widgetS" native="true">
+    <property name="geometry">
+     <rect>
+      <x>710</x>
+      <y>40</y>
+      <width>131</width>
+      <height>161</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border:2px solid rgb(66, 72, 40);</string>
+    </property>
+    <widget class="QLabel" name="label_6">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>10</y>
+       <width>31</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Corbel</family>
+       <pointsize>9</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border: 0px</string>
+     </property>
+     <property name="text">
+      <string>S1</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_7">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>40</y>
+       <width>31</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Corbel</family>
+       <pointsize>9</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border: 0px</string>
+     </property>
+     <property name="text">
+      <string>S2</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="lineEditS1">
+     <property name="geometry">
+      <rect>
+       <x>50</x>
+       <y>10</y>
+       <width>59</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border: 1px solid gray</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="lineEditS2">
+     <property name="geometry">
+      <rect>
+       <x>50</x>
+       <y>40</y>
+       <width>59</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border: 1px solid gray</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="lineEditS3">
+     <property name="geometry">
+      <rect>
+       <x>50</x>
+       <y>70</y>
+       <width>59</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border: 1px solid gray</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="lineEditS4">
+     <property name="geometry">
+      <rect>
+       <x>50</x>
+       <y>100</y>
+       <width>59</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border: 1px solid gray</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="lineEditS5">
+     <property name="geometry">
+      <rect>
+       <x>50</x>
+       <y>130</y>
+       <width>59</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border: 1px solid gray</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_8">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>70</y>
+       <width>31</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Corbel</family>
+       <pointsize>9</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border: 0px</string>
+     </property>
+     <property name="text">
+      <string>S3</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_9">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>100</y>
+       <width>31</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Corbel</family>
+       <pointsize>9</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border: 0px</string>
+     </property>
+     <property name="text">
+      <string>S4</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_10">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>130</y>
+       <width>31</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Corbel</family>
+       <pointsize>9</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border: 0px</string>
+     </property>
+     <property name="text">
+      <string>S5</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="widgetD" native="true">
+    <property name="geometry">
+     <rect>
+      <x>850</x>
+      <y>40</y>
+      <width>131</width>
+      <height>161</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border:2px solid rgb(66, 72, 40);</string>
+    </property>
+    <widget class="QLabel" name="label_11">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>10</y>
+       <width>31</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Corbel</family>
+       <pointsize>9</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border: 0px</string>
+     </property>
+     <property name="text">
+      <string>D1</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_12">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>40</y>
+       <width>31</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Corbel</family>
+       <pointsize>9</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border: 0px</string>
+     </property>
+     <property name="text">
+      <string>D2</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="lineEditD1">
+     <property name="geometry">
+      <rect>
+       <x>50</x>
+       <y>10</y>
+       <width>59</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border: 1px solid gray</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="lineEditD2">
+     <property name="geometry">
+      <rect>
+       <x>50</x>
+       <y>40</y>
+       <width>59</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border: 1px solid gray</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="lineEditD3">
+     <property name="geometry">
+      <rect>
+       <x>50</x>
+       <y>70</y>
+       <width>59</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border: 1px solid gray</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="lineEditD4">
+     <property name="geometry">
+      <rect>
+       <x>50</x>
+       <y>100</y>
+       <width>59</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border: 1px solid gray</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="lineEditD5">
+     <property name="geometry">
+      <rect>
+       <x>50</x>
+       <y>130</y>
+       <width>59</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border: 1px solid gray</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_13">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>70</y>
+       <width>31</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Corbel</family>
+       <pointsize>9</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border: 0px</string>
+     </property>
+     <property name="text">
+      <string>D3</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_14">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>100</y>
+       <width>31</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Corbel</family>
+       <pointsize>9</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border: 0px</string>
+     </property>
+     <property name="text">
+      <string>D4</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_15">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>130</y>
+       <width>31</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Corbel</family>
+       <pointsize>9</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border: 0px</string>
+     </property>
+     <property name="text">
+      <string>D5</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="widgetD_2" native="true">
+    <property name="geometry">
+     <rect>
+      <x>990</x>
+      <y>40</y>
+      <width>131</width>
+      <height>161</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border:2px solid rgb(66, 72, 40);</string>
+    </property>
+    <widget class="QLabel" name="label_16">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>10</y>
+       <width>31</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Corbel</family>
+       <pointsize>9</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border: 0px</string>
+     </property>
+     <property name="text">
+      <string>B1</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_17">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>40</y>
+       <width>31</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Corbel</family>
+       <pointsize>9</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border: 0px</string>
+     </property>
+     <property name="text">
+      <string>B2</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="lineEditB1">
+     <property name="geometry">
+      <rect>
+       <x>50</x>
+       <y>10</y>
+       <width>59</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border: 1px solid gray</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="lineEditB2">
+     <property name="geometry">
+      <rect>
+       <x>50</x>
+       <y>40</y>
+       <width>59</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border: 1px solid gray</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="lineEditB3">
+     <property name="geometry">
+      <rect>
+       <x>50</x>
+       <y>70</y>
+       <width>59</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border: 1px solid gray</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="lineEditB4">
+     <property name="geometry">
+      <rect>
+       <x>50</x>
+       <y>100</y>
+       <width>59</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border: 1px solid gray</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="lineEditB5">
+     <property name="geometry">
+      <rect>
+       <x>50</x>
+       <y>130</y>
+       <width>59</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border: 1px solid gray</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_18">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>70</y>
+       <width>31</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Corbel</family>
+       <pointsize>9</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border: 0px</string>
+     </property>
+     <property name="text">
+      <string>B3</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_19">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>100</y>
+       <width>31</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Corbel</family>
+       <pointsize>9</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border: 0px</string>
+     </property>
+     <property name="text">
+      <string>B4</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_20">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>130</y>
+       <width>31</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Corbel</family>
+       <pointsize>9</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border: 0px</string>
+     </property>
+     <property name="text">
+      <string>B5</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+   </widget>
   </widget>
   <widget class="QTreeWidget" name="orderList">
    <property name="geometry">
     <rect>
-     <x>0</x>
-     <y>370</y>
-     <width>1170</width>
+     <x>9</x>
+     <y>380</y>
+     <width>1151</width>
      <height>291</height>
     </rect>
    </property>
-   <property name="layoutDirection">
-    <enum>Qt::LeftToRight</enum>
+   <property name="font">
+    <font>
+     <family>Corbel</family>
+     <pointsize>12</pointsize>
+    </font>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color: rgb(213, 91, 68);
+    <string notr="true">background-color: rgb(247,241,232);
 QHeaderView::section { background-color: rgb(66, 72, 40); }</string>
    </property>
    <property name="sizeAdjustPolicy">
@@ -1405,6 +1594,14 @@ QHeaderView::section { background-color: rgb(66, 72, 40); }</string>
     <property name="text">
      <string>Order Num</string>
     </property>
+    <property name="font">
+     <font>
+      <family>Corbel</family>
+      <pointsize>12</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
     <property name="textAlignment">
      <set>AlignCenter</set>
     </property>
@@ -1412,6 +1609,14 @@ QHeaderView::section { background-color: rgb(66, 72, 40); }</string>
    <column>
     <property name="text">
      <string>Name</string>
+    </property>
+    <property name="font">
+     <font>
+      <family>Corbel</family>
+      <pointsize>12</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
     </property>
     <property name="textAlignment">
      <set>AlignCenter</set>
@@ -1421,6 +1626,14 @@ QHeaderView::section { background-color: rgb(66, 72, 40); }</string>
     <property name="text">
      <string>Date</string>
     </property>
+    <property name="font">
+     <font>
+      <family>Corbel</family>
+      <pointsize>12</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
     <property name="textAlignment">
      <set>AlignCenter</set>
     </property>
@@ -1428,6 +1641,30 @@ QHeaderView::section { background-color: rgb(66, 72, 40); }</string>
    <column>
     <property name="text">
      <string>Time</string>
+    </property>
+    <property name="font">
+     <font>
+      <family>Corbel</family>
+      <pointsize>12</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="textAlignment">
+     <set>AlignCenter</set>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Subtotal</string>
+    </property>
+    <property name="font">
+     <font>
+      <family>Corbel</family>
+      <pointsize>12</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
     </property>
     <property name="textAlignment">
      <set>AlignCenter</set>
@@ -1437,6 +1674,30 @@ QHeaderView::section { background-color: rgb(66, 72, 40); }</string>
     <property name="text">
      <string>Total</string>
     </property>
+    <property name="font">
+     <font>
+      <family>Corbel</family>
+      <pointsize>12</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="textAlignment">
+     <set>AlignCenter</set>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>12% VAT</string>
+    </property>
+    <property name="font">
+     <font>
+      <family>Corbel</family>
+      <pointsize>12</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
     <property name="textAlignment">
      <set>AlignCenter</set>
     </property>
@@ -1444,6 +1705,14 @@ QHeaderView::section { background-color: rgb(66, 72, 40); }</string>
    <column>
     <property name="text">
      <string>Mode of Payment</string>
+    </property>
+    <property name="font">
+     <font>
+      <family>Corbel</family>
+      <pointsize>12</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
     </property>
     <property name="textAlignment">
      <set>AlignCenter</set>
@@ -1453,6 +1722,14 @@ QHeaderView::section { background-color: rgb(66, 72, 40); }</string>
     <property name="text">
      <string>M1</string>
     </property>
+    <property name="font">
+     <font>
+      <family>Corbel</family>
+      <pointsize>12</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
     <property name="textAlignment">
      <set>AlignCenter</set>
     </property>
@@ -1460,6 +1737,14 @@ QHeaderView::section { background-color: rgb(66, 72, 40); }</string>
    <column>
     <property name="text">
      <string>M2</string>
+    </property>
+    <property name="font">
+     <font>
+      <family>Corbel</family>
+      <pointsize>12</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
     </property>
     <property name="textAlignment">
      <set>AlignCenter</set>
@@ -1469,6 +1754,14 @@ QHeaderView::section { background-color: rgb(66, 72, 40); }</string>
     <property name="text">
      <string>M3</string>
     </property>
+    <property name="font">
+     <font>
+      <family>Corbel</family>
+      <pointsize>12</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
     <property name="textAlignment">
      <set>AlignCenter</set>
     </property>
@@ -1476,6 +1769,14 @@ QHeaderView::section { background-color: rgb(66, 72, 40); }</string>
    <column>
     <property name="text">
      <string>M4</string>
+    </property>
+    <property name="font">
+     <font>
+      <family>Corbel</family>
+      <pointsize>12</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
     </property>
     <property name="textAlignment">
      <set>AlignCenter</set>
@@ -1485,6 +1786,14 @@ QHeaderView::section { background-color: rgb(66, 72, 40); }</string>
     <property name="text">
      <string>M5</string>
     </property>
+    <property name="font">
+     <font>
+      <family>Corbel</family>
+      <pointsize>12</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
     <property name="textAlignment">
      <set>AlignCenter</set>
     </property>
@@ -1492,6 +1801,14 @@ QHeaderView::section { background-color: rgb(66, 72, 40); }</string>
    <column>
     <property name="text">
      <string>S1</string>
+    </property>
+    <property name="font">
+     <font>
+      <family>Corbel</family>
+      <pointsize>12</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
     </property>
     <property name="textAlignment">
      <set>AlignCenter</set>
@@ -1501,6 +1818,14 @@ QHeaderView::section { background-color: rgb(66, 72, 40); }</string>
     <property name="text">
      <string>S2</string>
     </property>
+    <property name="font">
+     <font>
+      <family>Corbel</family>
+      <pointsize>12</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
     <property name="textAlignment">
      <set>AlignCenter</set>
     </property>
@@ -1508,6 +1833,14 @@ QHeaderView::section { background-color: rgb(66, 72, 40); }</string>
    <column>
     <property name="text">
      <string>S3</string>
+    </property>
+    <property name="font">
+     <font>
+      <family>Corbel</family>
+      <pointsize>12</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
     </property>
     <property name="textAlignment">
      <set>AlignHCenter|AlignBottom</set>
@@ -1517,6 +1850,14 @@ QHeaderView::section { background-color: rgb(66, 72, 40); }</string>
     <property name="text">
      <string>S4</string>
     </property>
+    <property name="font">
+     <font>
+      <family>Corbel</family>
+      <pointsize>12</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
     <property name="textAlignment">
      <set>AlignCenter</set>
     </property>
@@ -1524,6 +1865,14 @@ QHeaderView::section { background-color: rgb(66, 72, 40); }</string>
    <column>
     <property name="text">
      <string>S5</string>
+    </property>
+    <property name="font">
+     <font>
+      <family>Corbel</family>
+      <pointsize>12</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
     </property>
     <property name="textAlignment">
      <set>AlignCenter</set>
@@ -1533,6 +1882,14 @@ QHeaderView::section { background-color: rgb(66, 72, 40); }</string>
     <property name="text">
      <string>D1</string>
     </property>
+    <property name="font">
+     <font>
+      <family>Corbel</family>
+      <pointsize>12</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
     <property name="textAlignment">
      <set>AlignCenter</set>
     </property>
@@ -1540,6 +1897,14 @@ QHeaderView::section { background-color: rgb(66, 72, 40); }</string>
    <column>
     <property name="text">
      <string>D2</string>
+    </property>
+    <property name="font">
+     <font>
+      <family>Corbel</family>
+      <pointsize>12</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
     </property>
     <property name="textAlignment">
      <set>AlignCenter</set>
@@ -1549,6 +1914,14 @@ QHeaderView::section { background-color: rgb(66, 72, 40); }</string>
     <property name="text">
      <string>D3</string>
     </property>
+    <property name="font">
+     <font>
+      <family>Corbel</family>
+      <pointsize>12</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
     <property name="textAlignment">
      <set>AlignCenter</set>
     </property>
@@ -1556,6 +1929,14 @@ QHeaderView::section { background-color: rgb(66, 72, 40); }</string>
    <column>
     <property name="text">
      <string>D4</string>
+    </property>
+    <property name="font">
+     <font>
+      <family>Corbel</family>
+      <pointsize>12</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
     </property>
     <property name="textAlignment">
      <set>AlignCenter</set>
@@ -1565,6 +1946,14 @@ QHeaderView::section { background-color: rgb(66, 72, 40); }</string>
     <property name="text">
      <string>D5</string>
     </property>
+    <property name="font">
+     <font>
+      <family>Corbel</family>
+      <pointsize>12</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
     <property name="textAlignment">
      <set>AlignCenter</set>
     </property>
@@ -1572,6 +1961,14 @@ QHeaderView::section { background-color: rgb(66, 72, 40); }</string>
    <column>
     <property name="text">
      <string>B1</string>
+    </property>
+    <property name="font">
+     <font>
+      <family>Corbel</family>
+      <pointsize>12</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
     </property>
     <property name="textAlignment">
      <set>AlignCenter</set>
@@ -1581,6 +1978,14 @@ QHeaderView::section { background-color: rgb(66, 72, 40); }</string>
     <property name="text">
      <string>B2</string>
     </property>
+    <property name="font">
+     <font>
+      <family>Corbel</family>
+      <pointsize>12</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
     <property name="textAlignment">
      <set>AlignCenter</set>
     </property>
@@ -1588,6 +1993,14 @@ QHeaderView::section { background-color: rgb(66, 72, 40); }</string>
    <column>
     <property name="text">
      <string>B3</string>
+    </property>
+    <property name="font">
+     <font>
+      <family>Corbel</family>
+      <pointsize>12</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
     </property>
     <property name="textAlignment">
      <set>AlignCenter</set>
@@ -1597,6 +2010,14 @@ QHeaderView::section { background-color: rgb(66, 72, 40); }</string>
     <property name="text">
      <string>B4</string>
     </property>
+    <property name="font">
+     <font>
+      <family>Corbel</family>
+      <pointsize>12</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
     <property name="textAlignment">
      <set>AlignCenter</set>
     </property>
@@ -1605,6 +2026,14 @@ QHeaderView::section { background-color: rgb(66, 72, 40); }</string>
     <property name="text">
      <string>B5</string>
     </property>
+    <property name="font">
+     <font>
+      <family>Corbel</family>
+      <pointsize>12</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
     <property name="textAlignment">
      <set>AlignCenter</set>
     </property>
@@ -1612,6 +2041,14 @@ QHeaderView::section { background-color: rgb(66, 72, 40); }</string>
    <column>
     <property name="text">
      <string>Status</string>
+    </property>
+    <property name="font">
+     <font>
+      <family>Corbel</family>
+      <pointsize>12</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
     </property>
     <property name="textAlignment">
      <set>AlignCenter</set>
@@ -1622,7 +2059,7 @@ QHeaderView::section { background-color: rgb(66, 72, 40); }</string>
    <property name="geometry">
     <rect>
      <x>20</x>
-     <y>690</y>
+     <y>700</y>
      <width>260</width>
      <height>40</height>
     </rect>
@@ -1646,8 +2083,8 @@ QHeaderView::section { background-color: rgb(66, 72, 40); }</string>
    <property name="geometry">
     <rect>
      <x>280</x>
-     <y>690</y>
-     <width>160</width>
+     <y>700</y>
+     <width>191</width>
      <height>40</height>
     </rect>
    </property>
@@ -1670,14 +2107,22 @@ QHeaderView::section { background-color: rgb(66, 72, 40); }</string>
    <property name="geometry">
     <rect>
      <x>680</x>
-     <y>680</y>
+     <y>690</y>
      <width>150</width>
      <height>50</height>
     </rect>
    </property>
+   <property name="font">
+    <font>
+     <family>Corbel</family>
+     <pointsize>12</pointsize>
+     <weight>75</weight>
+     <italic>false</italic>
+     <bold>true</bold>
+    </font>
+   </property>
    <property name="styleSheet">
     <string notr="true">background-color: rgb(213, 91, 68);
-font: 12pt &quot;Corbel&quot;;
 color: rgb(247, 241, 232);</string>
    </property>
    <property name="text">
@@ -1688,14 +2133,21 @@ color: rgb(247, 241, 232);</string>
    <property name="geometry">
     <rect>
      <x>840</x>
-     <y>680</y>
+     <y>690</y>
      <width>170</width>
      <height>50</height>
     </rect>
    </property>
+   <property name="font">
+    <font>
+     <family>Corbel</family>
+     <pointsize>12</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
    <property name="styleSheet">
     <string notr="true">background-color: rgb(213, 91, 68);
-font: 12pt &quot;Corbel&quot;;
 color: rgb(247, 241, 232);</string>
    </property>
    <property name="text">
@@ -1706,14 +2158,21 @@ color: rgb(247, 241, 232);</string>
    <property name="geometry">
     <rect>
      <x>1020</x>
-     <y>680</y>
+     <y>690</y>
      <width>140</width>
      <height>50</height>
     </rect>
    </property>
+   <property name="font">
+    <font>
+     <family>Corbel</family>
+     <pointsize>12</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
    <property name="styleSheet">
     <string notr="true">background-color: rgb(213, 91, 68);
-font: 12pt &quot;Corbel&quot;;
 color: rgb(247, 241, 232);</string>
    </property>
    <property name="text">
