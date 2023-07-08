@@ -77,8 +77,9 @@ class DataAdder():
             self.set_table_item(row_index, 2, "{:.2f}".format(price))
             self.set_table_item(row_index, 3, quantity)
             self.set_table_item(row_index, 4, amount)
+            
 
-            self.table.setRowHeight(row_index, 50)
+            self.table.setRowHeight(row_index, 60)
             
     def set_table_item(self, row, column, value):
         if column == 1:
@@ -89,6 +90,7 @@ class DataAdder():
             self.table.setCellWidget(row, column, image_label)
         else:
             item = QTableWidgetItem(str(value))
+            item.setTextAlignment(Qt.AlignCenter)
             self.table.setItem(row, column, item)
 
     def search_table(self, target_value, column):
