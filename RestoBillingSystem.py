@@ -13,7 +13,7 @@ class Orders:
     def __init__(self):
         self.data = orders_data
     
-    def orderInfo(self, orderNum, orderCode, name, date, time, subtotal, total, vat, modeOfPayment, M1, M2, M3, M4, M5, S1, S2, S3, S4, S5, D1, D2, D3, D4, D5, B1, B2, B3, B4, B5, status):
+    def orderInfo(self, orderNum, orderCode, name, date, time, total, subtotal, vat, modeOfPayment, M1, M2, M3, M4, M5, S1, S2, S3, S4, S5, D1, D2, D3, D4, D5, B1, B2, B3, B4, B5, status):
         self.data[orderNum] = {
             'orderCode' : orderCode, 'name' : name, 'date' : date, 'time' : time, 'total' : total, 
             'subtotal' : subtotal, 'vat' : vat, 'modeOfPayment' : modeOfPayment,
@@ -23,13 +23,14 @@ class Orders:
             'B1' : B1, 'B2' : B2, 'B3' : B3, 'B4': B4, 'B5': B5,
             'status' : status
         }
-
-class OrderManager:
-    def __init__(self):
-        self.order = Orders()
-
-    def add_order(self, orderNum, orderCode, name, date, time, subtotal, total, vat, modeOfPayment, M1, M2, M3, M4, M5, S1, S2, S3, S4, S5, D1, D2, D3, D4, D5, B1, B2, B3, B4, B5, status):
-        self.order.orderInfo(orderNum, orderCode, name, date, time, subtotal, total, vat, modeOfPayment, M1, M2, M3, M4, M5, S1, S2, S3, S4, S5, D1, D2, D3, D4, D5, B1, B2, B3, B4, B5, status)
+    
+    def searchOrdersByDate(self, search_date):
+        global orders_data  # Access the global variable
+        filtered_orders = {}
+        for order_num, order_data in self.data.items():
+            if order_data['date'] == search_date:
+                filtered_orders[order_num] = order_data
+        orders_data = filtered_orders  # Update the global variable
 
 class foodDesc:
     def __init__(self):
@@ -39,7 +40,7 @@ class foodDesc:
         self.B1_prc = 30.00; self.B2_prc = 20.00; self.B3_prc = 55.00; self.B4_prc = 80.00; self.B5_prc = 40.00
 
         self.M1_name = "Pan Fried Salmon"; self.M2_name = "Crispy Baked Chicken"; self.M3_name = "Teriyaki Chicken Bowl"; self.M4_name = "Golden Shrimp"; self.M5_name = "Stuffed Chicken Breast"
-        self.S1_name = "French Fries with Aioli"; self.S2_name = "Collard Greens"; self.S3_name = "Chipotle Mashed Potatoes"; self.S4_name = "Pesto Pasta Salad"; self.S5_name = "Steamed Rice"
+        self.S1_name = "French Fries with Aioli"; self.S2_name = "Collard Greens"; self.S3_name = "Chipotle Mashed Potato"; self.S4_name = "Pesto Pasta Salad"; self.S5_name = "Steamed Rice"
         self.D1_name = "Tiramisu"; self.D2_name = "Cheesecake with Berries"; self.D3_name = "Creme Caramel"; self.D4_name = "Blackberry Pie"; self.D5_name = "Red Velvet Cake"
         self.B1_name = "Soda Water"; self.B2_name = "500mL Bottled Mineral Water"; self.B3_name = "Fresh Orange Juice"; self.B4_name = "Milkshake"; self.B5_name = "Iced Tea"
 
@@ -73,7 +74,7 @@ class DataAdder():
             self.table.insertRow(row_index)
             self.set_table_item(row_index, 0, food_code)
             self.set_table_item(row_index, 1, food_picture)
-            self.set_table_item(row_index, 2, price)
+            self.set_table_item(row_index, 2, "{:.2f}".format(price))
             self.set_table_item(row_index, 3, quantity)
             self.set_table_item(row_index, 4, amount)
 
@@ -131,9 +132,6 @@ class MessageBox:
         msg_box.setText(message)
         msg_box.setStandardButtons(QMessageBox.Yes | QMessageBox.No)
         msg_box.setDefaultButton(QMessageBox.No)
-
-        button_yes = msg_box.button(QMessageBox.Yes)
-        button_no = msg_box.button(QMessageBox.No)
         
         if msg_box.exec_() == QMessageBox.Yes:  # Check the result of the message box
             return True
@@ -164,7 +162,6 @@ class FileHandling:
     
     def saveOrder(self):
         file_name = "ordersData.txt"
-        
         try:
             with codecs.open(file_name, 'w', encoding='utf-8') as file:
                 for order_num, order_data in orders_data.items():
@@ -181,8 +178,7 @@ class FileHandling:
 
     def RetrieveOrder(self):
         file_name = "ordersData.txt"
-        self.addOrder = OrderManager()
-        self.order = Orders()
+        self.addOrder = Orders()
         orderNum = 1
         try:
             with codecs.open(file_name, 'r', encoding='utf-8') as file:
@@ -190,11 +186,9 @@ class FileHandling:
                     decrypted_data = self.decrypt(line.strip(), 20)
                     if decrypted_data:
                         data = decrypted_data.split(',')
-                        self.addOrder.add_order(orderNum,data[0],data[1],data[2],data[3],data[4],data[5],data[6],data[7],data[8],data[9],data[10],data[11],data[12],data[13],data[14],data[15],data[16],data[17],data[18],data[19],data[20],data[21],data[22],data[23],data[24],data[25],data[26],data[27],data[28])
-                        #print(data)
+                        self.addOrder.orderInfo(orderNum,data[0],data[1],data[2],data[3],data[4],data[5],data[6],data[7],data[8],data[9],data[10],data[11],data[12],data[13],data[14],data[15],data[16],data[17],data[18],data[19],data[20],data[21],data[22],data[23],data[24],data[25],data[26],data[27],data[28])
                         orderNum += 1
-                    
-        except IOError as ex:
+        except:
             self.mssgBox.show_warning_message_box("Error reading the file.")
 
     def encrypt(self, text, shift):
@@ -220,6 +214,7 @@ class Menu(QDialog):
         loadUi("Menu.ui",self)
         self.addbttn.clicked.connect(self.gotoAddOrder)
         self.displayBttn.clicked.connect(self.gotoDisplayOrders)
+        self.adminbttn.clicked.connect(self.gotoAdmin)
 
     def gotoAddOrder(self):
         nxtForm = AddOrder()
@@ -231,6 +226,10 @@ class Menu(QDialog):
         widget.addWidget(nxtForm)
         widget.setCurrentIndex(widget.currentIndex()+1)
 
+    def gotoAdmin(self):
+        nxtForm = Admin()
+        widget.addWidget(nxtForm)
+        widget.setCurrentIndex(widget.currentIndex()+1)
 
 #add order form
 class AddOrder(QDialog):
@@ -324,89 +323,89 @@ class AddOrder(QDialog):
     def add_m1(self):
         m1 = self.qtty_main1.toPlainText()
         self.check(m1, 'M1', self.food.M1_prc, 'food_pics/pan fried salmon.PNG')
-        self.qtty_main1.setText('0')
+        self.qtty_main1.setText('')
     def add_m2(self):
         m2 = self.qtty_main2.toPlainText()
         self.check(m2, 'M2', self.food.M2_prc, 'food_pics/crissy baked chicken.PNG')
-        self.qtty_main2.setText('0')
+        self.qtty_main2.setText('')
     def add_m3(self):
         m3 = self.qtty_main3.toPlainText()
         self.check(m3, 'M3', self.food.M3_prc, 'food_pics/teriyaki chicken bowl.PNG')
-        self.qtty_main3.setText('0')
+        self.qtty_main3.setText('')
     def add_m4(self):
         m4 = self.qtty_main4.toPlainText()
         self.check(m4, 'M4', self.food.M4_prc, 'food_pics/golden shrimp.PNG')
-        self.qtty_main4.setText('0')
+        self.qtty_main4.setText('')
     def add_m5(self):
         m5 = self.qtty_main5.toPlainText()
         self.check(m5, 'M5', self.food.M5_prc, 'food_pics/stuffed chicken breast.PNG')
-        self.qtty_main4.setText('0')
+        self.qtty_main5.setText('')
     
     #add functions for side dishes
     def add_s1(self):
         s1 = self.qtty_side1.toPlainText()
         self.check(s1, 'S1', self.food.S1_prc, 'food_pics/French fries with aoili.PNG')
-        self.qtty_side1.setText('0')
+        self.qtty_side1.setText('')
     def add_s2(self):
         s2 = self.qtty_side2.toPlainText()
         self.check(s2, 'S2', self.food.S2_prc, 'food_pics/Sautee Collard Greens.PNG')
-        self.qtty_side2.setText('0')
+        self.qtty_side2.setText('')
     def add_s3(self):
         s3 = self.qtty_side3.toPlainText()
         self.check(s3, 'S3', self.food.S3_prc, 'food_pics/Chipotle Mashed Potatoes.PNG')
-        self.qtty_side3.setText('0') 
+        self.qtty_side3.setText('') 
     def add_s4(self):
         s4 = self.qtty_side4.toPlainText()
         self.check(s4, 'S4', self.food.S4_prc, 'food_pics/Pesto Pasta Salad.PNG')
-        self.qtty_side4.setText('0') 
+        self.qtty_side4.setText('') 
     def add_s5(self):
         s5 = self.qtty_side5.toPlainText()
         self.check(s5, 'S5', self.food.S5_prc, 'food_pics/Steamed rice.PNG')
-        self.qtty_side5.setText('0') 
+        self.qtty_side5.setText('') 
 
     #add fucntions for desserts
     def add_d1(self):
         d1 = self.qtty_dessert1.toPlainText()
         self.check(d1, 'D1', self.food.D1_prc, 'food_pics/tiramisu.PNG')
-        self.qtty_dessert1.setText('0')
+        self.qtty_dessert1.setText('')
     def add_d2(self):
         d2 = self.qtty_dessert2.toPlainText()
         self.check(d2, 'D2', self.food.D2_prc, 'food_pics/cheesecake w berries.PNG')
-        self.qtty_dessert2.setText('0')
+        self.qtty_dessert2.setText('')
     def add_d3(self):
         d3 = self.qtty_dessert3.toPlainText()
         self.check(d3, 'D3', self.food.D3_prc, 'food_pics/Creme caramel.PNG')
-        self.qtty_dessert3.setText('0') 
+        self.qtty_dessert3.setText('') 
     def add_d4(self):
         d4 = self.qtty_dessert4.toPlainText()
         self.check(d4, 'D4', self.food.D4_prc, 'food_pics/Blackberry pie.PNG')
-        self.qtty_dessert4.setText('0') 
+        self.qtty_dessert4.setText('') 
     def add_d5(self):
         d5 = self.qtty_dessert5.toPlainText()
         self.check(d5, 'D5', self.food.D5_prc, 'food_pics/Red Velvet cake.PNG')
-        self.qtty_dessert5.setText('0')          
+        self.qtty_dessert5.setText('')          
     
     #add functions fot beverages
     def add_b1(self):
         b1 = self.qtty_bev1.toPlainText()
         self.check(b1, 'B1', self.food.B1_prc, 'food_pics/soda water.PNG')
-        self.qtty_bev1.setText('0')
+        self.qtty_bev1.setText('')
     def add_b2(self):
         b2 = self.qtty_bev2.toPlainText()
         self.check(b2, 'B2', self.food.B1_prc, 'food_pics/bottled water.PNG')
-        self.qtty_bev2.setText('0')
+        self.qtty_bev2.setText('')
     def add_b3(self):
         b3 = self.qtty_bev3.toPlainText()
         self.check(b3, 'B3', self.food.B3_prc, 'food_pics/orange juice.PNG')
-        self.qtty_bev3.setText('0')
+        self.qtty_bev3.setText('')
     def add_b4(self):
         b4 = self.qtty_bev4.toPlainText()
         self.check(b4, 'B4', self.food.B4_prc, 'food_pics/milkshake.PNG')
-        self.qtty_bev4.setText('0')
+        self.qtty_bev4.setText('')
     def add_b5(self):
         b5 = self.qtty_bev5.toPlainText()
         self.check(b5, 'B5', self.food.B5_prc, 'food_pics/iced tea.PNG')
-        self.qtty_bev5.setText('0')
+        self.qtty_bev5.setText('')
     
     def check(self, qtty, code, price, pic):
         if code not in self.order.data:
@@ -422,7 +421,7 @@ class AddOrder(QDialog):
         if 'subtotal' not in self.order.data:
             self.order.data['subtotal'] = 0
         self.order.data['subtotal'] += subTotal
-        self.total_lbl.setText(str(self.order.data['subtotal']))
+        self.total_lbl.setText("{:.2f}".format(self.order.data['subtotal']))
         return subTotal
 
     def delete_selected_row(self):
@@ -448,7 +447,6 @@ class AddOrder(QDialog):
                             self.ordersTable.setItem(row, col, QTableWidgetItem(item.text()))
                     self.ordersTable.removeRow(rows - 1)
                     
-        
     def gotoUserInfo(self):
         if self.ordersTable.rowCount() > 0:
             orderCode = random.randint(1000,9999)
@@ -504,12 +502,10 @@ class UserInfo(QDialog):
         self.lblTime.setText(label_time)
 
     def orderLabels(self):
-        "{:.2f}".format
         self.lblOrderNum.setText(str(self.printValue('orderCode')))
         self.lblSubTotal.setText("{:.2f}".format(float(self.printValue('subtotal'))))
         self.lblVat.setText("{:.2f}".format(float(self.printValue('vat'))))
         self.lblTotal.setText("{:.2f}".format(float(self.printValue('total'))))
-
 
         self.lineEditM1.setText(str(self.printValue('M1')))
         self.lineEditM2.setText(str(self.printValue('M2')))
@@ -606,6 +602,7 @@ class UserInfo(QDialog):
         subtotal = self.printValue('subtotal')
         vat = self.printValue('vat')
         total = self.printValue('total')
+        MoP = self.printValue('modeOfPayment')
 
         # Retrieve current date and time from class attributes
         currDate = self.lblDate.text()
@@ -630,8 +627,9 @@ class UserInfo(QDialog):
 
         # Write order details
         c.drawString(50, 600, "Order Details:")
-        c.drawString(250, 170, f"Subtotal: {subtotal}")
-        c.drawString(250, 140, f"VAT:       {vat}")
+        c.drawString(250, 170, f"{MoP}")
+        c.drawString(250, 150, f"Subtotal: {subtotal}")
+        c.drawString(250, 130, f"VAT:       {vat}")
         c.drawString(250, 110, f"Total:     {total}")
 
         # Write table data
@@ -652,7 +650,7 @@ class UserInfo(QDialog):
         c.save()
 
         self.mssgBox.show_info_message_box("Receipt printed.")
-    
+
     def gotoMenu(self):
         nxtForm = Menu()
         widget.addWidget(nxtForm)
@@ -682,6 +680,7 @@ class DisplayAllOrders(QDialog):
             for orderNum, order_data in self.order.data.items():    
                 item = QTreeWidgetItem()  # Create a new QTreeWidgetItem
                 for column, (key, value) in enumerate(order_data.items()):
+                    item.setTextAlignment(column, Qt.AlignCenter)
                     item.setText(column, str(value))  # Set the text for each column
                     if key == 'total':
                         value = float(value)
@@ -690,7 +689,6 @@ class DisplayAllOrders(QDialog):
             self.TAOlbl_2.setText("{:.2f}".format(overallTotal))
     
     def display_selected_order(self):
-        #"{:.2f}".format
         selected_items = self.orderList.selectedItems()
         self.initialize_orderText()
         if len(selected_items) > 0:
@@ -783,12 +781,343 @@ class DisplayAllOrders(QDialog):
         else:
             self.mssgBox.show_warning_message_box("Please select an order.")
         
+    def gotoMenu(self):
+        nxtForm = Menu()
+        widget.addWidget(nxtForm)
+        widget.setCurrentIndex(widget.currentIndex()+1)
+
+#admin form
+class Admin(QDialog):
+    def __init__(self):
+        super(Admin,self).__init__()
+        loadUi("Admin.ui",self)
+        self.mssgbox = MessageBox()
+        self.file = FileHandling()
+        self.order = Orders()
+        self.bttnLogin.clicked.connect(self.inputPassword)
+        self.bttnBack.clicked.connect(self.gotoMenu)
+    
+    def inputPassword(self):
+        if len(self.Password.text()) == 0:
+            self.mssgbox.show_warning_message_box("Please enter a password.")
+        else:
+            inputPass = self.Password.text()
+            if inputPass == 'admin ako': #correct password
+                self.mssgbox.show_info_message_box("Correct password!")
+                self.adminWidget.setCurrentWidget(self.pageDate)
+                selected_defDate = self.dateChooser.selectedDate().toString(Qt.DefaultLocaleLongDate)
+                self.date.setText(selected_defDate)
+                self.dateChooser.selectionChanged.connect(self.selectDate)
+                self.bttnContinue.clicked.connect(self.gotoDailySales)
+            else:
+                self.mssgbox.show_warning_message_box("Incorrect Password!")
+                self.Password.setText('')
+
+    def selectDate(self):
+        selected_defDate = self.dateChooser.selectedDate().toString(Qt.DefaultLocaleLongDate)
+        self.date.setText(selected_defDate)
+    
+    def gotoDailySales(self):
+        self.file.RetrieveOrder()
+        selected_ISOdate = self.dateChooser.selectedDate().toString(Qt.ISODate)
+        selected_defDate = self.dateChooser.selectedDate().toString(Qt.DefaultLocaleLongDate)
+        self.order.searchOrdersByDate(selected_ISOdate)
+        if len(orders_data) > 0:
+            nxtForm = DailySales(selected_defDate)
+            widget.addWidget(nxtForm)
+            widget.setCurrentIndex(widget.currentIndex()+1)
+        else:
+            self.mssgbox.show_warning_message_box("No orders found.")
 
     def gotoMenu(self):
         nxtForm = Menu()
         widget.addWidget(nxtForm)
         widget.setCurrentIndex(widget.currentIndex()+1)
-                
+       
+#daily sales report form
+class DailySales(QDialog):
+    def __init__(self, date):
+        super(DailySales,self).__init__()
+        loadUi("DailySales.ui",self)
+        self.daily_sales = {}
+        self.food = foodDesc()
+        self.lblDate.setText(date)
+        self.gettingDailySales()
+        self.bestSeller_main()
+        self.bestSeller_side()
+        self.bestSeller_dessert()
+        self.bestSeller_bev()
+        self.pushButtonMenu.clicked.connect(self.gotoMenu)
+        self.orderCBox.activated.connect(self.gettingDailySales)
+    
+    def gettingDailySales(self):
+        M1_total = 0; M2_total = 0; M3_total = 0; M4_total = 0; M5_total = 0
+        S1_total = 0; S2_total = 0; S3_total = 0; S4_total = 0; S5_total = 0
+        D1_total = 0; D2_total = 0; D3_total = 0; D4_total = 0; D5_total = 0
+        B1_total = 0; B2_total = 0; B3_total = 0; B4_total = 0; B5_total = 0
+        subTotal = 0; vat = 0; totalAmt = 0
+        for order_num, order_data in orders_data.items():
+            M1_total += int(order_data['M1'])
+            M2_total += int(order_data['M2'])
+            M3_total += int(order_data['M3'])
+            M4_total += int(order_data['M4'])
+            M5_total += int(order_data['M5'])
+
+            S1_total += int(order_data['S1'])
+            S2_total += int(order_data['S2'])
+            S3_total += int(order_data['S3'])
+            S4_total += int(order_data['S4'])
+            S5_total += int(order_data['S5'])
+
+            D1_total += int(order_data['D1'])
+            D2_total += int(order_data['D2'])
+            D3_total += int(order_data['D3'])
+            D4_total += int(order_data['D4'])
+            D5_total += int(order_data['D5'])
+
+            B1_total += int(order_data['B1'])
+            B2_total += int(order_data['B2'])
+            B3_total += int(order_data['B3'])
+            B4_total += int(order_data['B4'])
+            B5_total += int(order_data['B5'])
+            subTotal += float(order_data['subtotal'])
+            vat += float(order_data['vat'])
+            totalAmt += float(order_data['total'])
+
+        #self.daily(1, M1_total, M2_total, M3_total, M4_total, M5_total, S1_total, S2_total, S3_total, S4_total, S5_total, D1_total, D2_total, D3_total, D4_total, D5_total, B1_total, B2_total, B3_total, B4_total, B5_total)
+        self.daily_sales[1] = {
+            'M1': M1_total, 'M2': M2_total, 'M3': M3_total, 'M4': M4_total, 'M5': M5_total,
+            'S1': S1_total, 'S2': S2_total, 'S3': S3_total, 'S4': S4_total, 'S5': S5_total,
+            'D1': D1_total, 'D2': D2_total, 'D3': D3_total, 'D4': D4_total, 'D5': D5_total,
+            'B1': B1_total, 'B2': B2_total, 'B3': B3_total, 'B4': B4_total, 'B5': B5_total
+        }
+        
+        self.salesTotal.setText("{:.2f}".format(totalAmt))
+        self.salesAmt.setText("{:.2f}".format(subTotal))
+        self.salesTax.setText("{:.2f}".format(vat))
+        
+        mop = self.orderCBox.currentText()
+        if mop == 'Greatest to least sales':
+            self.daily_sales = {k: dict(sorted(v.items(), key=lambda item: item[1], reverse=True)) for k, v in self.daily_sales.items()}
+        else:
+            self.daily_sales = {k: dict(sorted(v.items(), key=lambda item: item[1])) for k, v in self.daily_sales.items()} 
+        
+        self.allocateDSTable()
+
+    def allocateDSTable(self):
+        self.dailySales.clear()
+        category_mapping = {
+            'M1': {'name': self.food.M1_name, 'prc': "{:.2f}".format(self.food.M1_prc), 'category': 'Main Dish'
+            },'M2': {'name': self.food.M2_name, 'prc': "{:.2f}".format(self.food.M2_prc), 'category': 'Main Dish'
+            },'M3': {'name': self.food.M3_name, 'prc': "{:.2f}".format(self.food.M3_prc), 'category': 'Main Dish'
+            },'M4': {'name': self.food.M4_name, 'prc': "{:.2f}".format(self.food.M5_prc), 'category': 'Main Dish'
+            },'M5': {'name': self.food.M5_name, 'prc': "{:.2f}".format(self.food.M5_prc), 'category': 'Main Dish'
+            },
+            'S1': {'name': self.food.S1_name, 'prc': "{:.2f}".format(self.food.S1_prc), 'category': 'Side Dish'
+            },'S2': {'name': self.food.S2_name,'prc': "{:.2f}".format(self.food.S2_prc),'category': 'Side Dish'
+            },'S3': {'name': self.food.S3_name,'prc': "{:.2f}".format(self.food.S3_prc),'category': 'Side Dish'
+            },'S4': {'name': self.food.S4_name,'prc': "{:.2f}".format(self.food.S4_prc),'category': 'Side Dish'
+            },'S5': {'name': self.food.S5_name,'prc': "{:.2f}".format(self.food.S5_prc),'category': 'Side Dish'
+            },
+            'D1': {'name': self.food.D1_name,'prc': "{:.2f}".format(self.food.D1_prc),'category': 'Dessert'
+            },'D2': {'name': self.food.D2_name,'prc': "{:.2f}".format(self.food.D2_prc),'category': 'Dessert'
+            },'D3': {'name': self.food.D3_name,'prc': "{:.2f}".format(self.food.D3_prc),'category': 'Dessert'
+            },'D4': {'name': self.food.D4_name,'prc': "{:.2f}".format(self.food.D4_prc),'category': 'Dessert'
+            },'D5': {'name': self.food.D5_name,'prc': "{:.2f}".format(self.food.D5_prc),'category': 'Dessert'
+            },
+            'B1': {'name': self.food.B1_name,'prc': "{:.2f}".format(self.food.B1_prc),'category': 'Beverage'
+            },'B2': {'name': self.food.B2_name,'prc': "{:.2f}".format(self.food.B2_prc),'category': 'Beverage'
+            },'B3': {'name': self.food.B3_name,'prc': "{:.2f}".format(self.food.B3_prc),'category': 'Beverage'
+            },'B4': {'name': self.food.B4_name,'prc': "{:.2f}".format(self.food.B4_prc),'category': 'Beverage'
+            },'B5': {'name': self.food.B5_name,'prc': "{:.2f}".format(self.food.B5_prc),'category': 'Beverage'
+            }
+        }
+
+        for column in range(7): 
+            self.dailySales.setColumnWidth(column, 153)  # Set the width of each column
+        
+        for category, value in self.daily_sales[1].items():
+            item = QTreeWidgetItem()
+            salesAmt = float(self.salesAmt.text())
+
+            for column in range(7): 
+                item.setTextAlignment(column, Qt.AlignCenter)
+
+            if category in category_mapping:
+                amt = self.getTotal(value, category_mapping[category]['prc'])
+                percentage = self.getPerc(float(amt), float(salesAmt))
+                item.setText(0, category)
+                item.setText(1, category_mapping[category]['name'])
+                item.setText(2, category_mapping[category]['category'])
+                item.setText(3, str(category_mapping[category]['prc']))
+                item.setText(4, str(value))
+                item.setText(5, amt)
+                item.setText(6, percentage)
+
+            self.dailySales.addTopLevelItem(item)
+    
+    def bestSeller_main(self):
+        salesAmt = float(self.salesAmt.text())
+        order = self.daily_sales[1]
+        main = [order['M1'], order['M2'], order['M3'], order['M4'], order['M5']]
+        bestMain = max(main)
+        if order['M1'] == bestMain:
+            pixmap = QPixmap('food_pics/pan fried salmon.png')
+            self.lblMain.setText(self.food.M1_name)
+            self.main_qtty.setText(str(order['M1']))
+            amt = self.getTotal(order['M1'], self.food.M1_prc)
+        elif order['M2'] == bestMain:
+            pixmap = QPixmap('food_pics/crissy baked chicken.png')
+            self.lblMain.setText(self.food.M2_name)
+            self.main_qtty.setText(str(order['M2']))
+            amt = self.getTotal(order['M2'], self.food.M2_prc)
+        elif order['M3'] == bestMain:
+            pixmap = QPixmap('food_pics/teriyaki chicken bowl.png')
+            self.lblMain.setText(self.food.M3_name)
+            self.main_qtty.setText(str(order['M3']))
+            amt = self.getTotal(self.daily_sales['M3'], self.food.M3_prc)
+        elif order['M4'] == bestMain:
+            pixmap = QPixmap('food_pics/golden shrimp.png')
+            self.lblMain.setText(self.food.M4_name)
+            self.main_qtty.setText(str(order['M4']))
+            amt = self.getTotal(order['M4'], self.food.M4_prc)
+        elif order['M5'] == bestMain:
+            pixmap = QPixmap('food_pics/stuffed chicken breast.png')
+            self.lblMain.setText(self.food.M5_name)
+            self.main_qtty.setText(str(order['M5']))
+            amt = self.getTotal(order['M5'], self.food.M5_prc)
+            
+        self.main_sp.setText(self.getPerc(amt, salesAmt))
+        self.pic_main.setPixmap(pixmap)
+
+    def bestSeller_side(self):
+        salesAmt = float(self.salesAmt.text())
+        order = self.daily_sales[1]
+        sides = [order['S1'], order['S2'], order['S3'], order['S4'], order['S5']]
+        bestSide = max(sides)
+        if order['S1'] == bestSide:
+            pixmap = QPixmap('food_pics/French fries with aoili.png')
+            self.lblSide.setText(self.food.S1_name)
+            self.side_qtty.setText(str(order['S1']))
+            amt = self.getTotal(order['S1'], self.food.S1_prc)
+        elif order['S2'] == bestSide:
+            pixmap = QPixmap('food_pics/Sautee Collard Greens.png')
+            self.lblSide.setText(self.food.S2_name)
+            self.side_qtty.setText(str(order['S2']))
+            amt = self.getTotal(order['S2'], self.food.S2_prc)
+        elif order['S3'] == bestSide:
+            pixmap = QPixmap('food_pics/Chipotle Mashed Potatoes.png')
+            self.pic_main.setPixmap(pixmap)
+            self.side_qtty.setText(str(order['S3']))
+            amt = self.getTotal(order['S3'], self.food.S3_prc)
+        elif order['S4'] == bestSide:
+            pixmap = QPixmap('food_pics/Pesto Pasta Salad.png')
+            self.lblSide.setText(self.food.S4_name)
+            self.side_qtty.setText(str(order['S4']))
+            amt = self.getTotal(order['S4'], self.food.S4_prc)
+        elif order['S5'] == bestSide:
+            pixmap = QPixmap('food_pics/Steamed rice.png')
+            self.lblSide.setText(self.food.S5_name)
+            self.side_qtty.setText(str(order['S5']))
+            amt = self.getTotal(order['S5'], self.food.S5_prc)
+            
+        self.side_sp.setText(self.getPerc(amt, salesAmt))
+        self.pic_side.setPixmap(pixmap)
+    
+    def bestSeller_dessert(self):
+        salesAmt = float(self.salesAmt.text())
+        order = self.daily_sales[1]
+        desserts = [order['D1'], order['D2'], order['D3'], order['D4'], order['D5']]
+        bestDessert = max(desserts)
+        if order['D1'] == bestDessert:
+            pixmap = QPixmap('food_pics/tiramisu.png')
+            self.lblDessert.setText(self.food.D1_name)
+            self.dessert_qtty.setText(str(order['D1']))
+            amt = self.getTotal(order['D1'], self.food.D1_prc)
+        elif order['D2'] == bestDessert:
+            pixmap = QPixmap('food_pics/cheesecake w berries.png')
+            self.lblDessert.setText(self.food.D2_name)
+            self.dessert_qtty.setText(str(order['D2']))
+            amt = self.getTotal(order['D2'], self.food.D2_prc)
+        elif order['D3'] == bestDessert:
+            pixmap = QPixmap('food_pics/Creme caramel.png')
+            self.lblDessert.setText(self.food.D3_name)
+            self.dessert_qtty.setText(str(order['D3']))
+            amt = self.getTotal(order['D3'], self.food.D3_prc)
+        elif order['D4'] == bestDessert:
+            pixmap = QPixmap('food_pics/Blackberry pie.png')
+            self.lblDessert.setText(self.food.D4_name)
+            self.dessert_qtty.setText(str(order['D4']))
+            amt = self.getTotal(order['D4'], self.food.D4_prc)
+        elif order['D5'] == bestDessert:
+            pixmap = QPixmap('food_pics/Red Velvet cake.png')
+            self.lblDessert.setText(self.food.D5_name)
+            self.dessert_qtty.setText(str(order['D5']))
+            amt = self.getTotal(order['D5'], self.food.D5_prc)
+        
+        self.dessert_sp.setText(self.getPerc(amt, salesAmt))
+        self.pic_des.setPixmap(pixmap)
+    
+    def bestSeller_bev(self):
+        salesAmt = float(self.salesAmt.text())
+        order = self.daily_sales[1]
+        bev = [order['B1'], order['B2'], order['B3'], order['B4'], order['B5']]
+        bestBev = max(bev)
+        if order['B1'] == bestBev:
+            pixmap = QPixmap('food_pics/soda water.png')
+            self.lblBeverage.setText(self.food.B1_name)
+            self.bev_qtty.setText(str(order['B1']))
+            amt = self.getTotal(order['B1'], self.food.B1_prc)
+        elif order['B2'] == bestBev:
+            pixmap = QPixmap('food_pics/bottled water.png')
+            self.lblBeverage.setText(self.food.B2_name)
+            self.bev_qtty.setText(str(order['B2']))
+            amt = self.getTotal(order['B2'], self.food.B2_prc)
+        elif order['B3'] == bestBev:
+            pixmap = QPixmap('food_pics/orange juice.png')
+            self.lblBeverage.setText(self.food.B3_name)
+            self.bev_qtty.setText(str(order['B3']))
+            amt = self.getTotal(order['B3'], self.food.B3_prc)
+        elif order['B4'] == bestBev:
+            pixmap = QPixmap('food_pics/milkshake.png')
+            self.lblBeverage.setText(self.food.B4_name)
+            self.bev_qtty.setText(str(order['B4']))
+            amt = self.getTotal(order['B4'], self.food.B4_prc)
+        elif order['B5'] == bestBev:
+            pixmap = QPixmap('food_pics/iced tea.png')
+            self.lblBeverage.setText(self.food.B5_name)
+            self.bev_qtty.setText(str(order['B5']))
+            amt = self.getTotal(order['B5'], self.food.B5_prc)
+        
+        self.bev_sp.setText(self.getPerc(amt, salesAmt))
+        self.pic_bev.setPixmap(pixmap)
+    
+    def getTotal(self, qtty, price):
+        totalAmt = float(price) * float(qtty)
+        return ("{:.2f}".format(totalAmt))
+    
+    def getPerc(self, total, salesAmt):
+        if total == 0 or salesAmt == 0:
+            return "0%"
+        else:
+            sp = (float(total) / float(salesAmt)) * 100
+            return "{:.2f}%".format(sp)
+        
+    def comBox(self):
+        mop = self.orderCBox.currentText()
+        self.dailySales.clear()
+        #order = self.daily_sales[1]
+        if mop == "Greatest to least sales":
+            self.daily_sales[1] = {k: dict(sorted(v.items(), key=lambda item: item[1], reverse=True)) for k, v in self.daily_sales.items()}
+            self.allocateDSTable
+        else:
+            self.daily_sales[1] = {k: dict(sorted(v.items(), key=lambda item: item[1])) for k, v in self.daily_sales.items()} 
+            self.allocateDSTable()
+
+    def gotoMenu(self):
+        nxtForm = Menu()
+        widget.addWidget(nxtForm)
+        widget.setCurrentIndex(widget.currentIndex()+1)
 
 app=QApplication(sys.argv)
 widget=QtWidgets.QStackedWidget()
