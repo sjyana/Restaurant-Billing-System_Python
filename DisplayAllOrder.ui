@@ -1580,6 +1580,12 @@
      <pointsize>12</pointsize>
     </font>
    </property>
+   <property name="cursor" stdset="0">
+    <cursorShape>PointingHandCursor</cursorShape>
+   </property>
+   <property name="autoFillBackground">
+    <bool>true</bool>
+   </property>
    <property name="styleSheet">
     <string notr="true">background-color: rgb(247,241,232);
 QHeaderView::section { background-color: rgb(66, 72, 40); }</string>
@@ -1656,7 +1662,7 @@ QHeaderView::section { background-color: rgb(66, 72, 40); }</string>
    </column>
    <column>
     <property name="text">
-     <string>Subtotal</string>
+     <string>Subotal</string>
     </property>
     <property name="font">
      <font>
@@ -2082,7 +2088,7 @@ QHeaderView::section { background-color: rgb(66, 72, 40); }</string>
   <widget class="QLabel" name="TAOlbl_2">
    <property name="geometry">
     <rect>
-     <x>280</x>
+     <x>290</x>
      <y>700</y>
      <width>191</width>
      <height>40</height>
@@ -2100,7 +2106,7 @@ QHeaderView::section { background-color: rgb(66, 72, 40); }</string>
     <string/>
    </property>
    <property name="alignment">
-    <set>Qt::AlignCenter</set>
+    <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
    </property>
   </widget>
   <widget class="QPushButton" name="pushbuttonDelete">
@@ -2120,6 +2126,9 @@ QHeaderView::section { background-color: rgb(66, 72, 40); }</string>
      <italic>false</italic>
      <bold>true</bold>
     </font>
+   </property>
+   <property name="cursor">
+    <cursorShape>PointingHandCursor</cursorShape>
    </property>
    <property name="styleSheet">
     <string notr="true">background-color: rgb(213, 91, 68);
@@ -2146,6 +2155,9 @@ color: rgb(247, 241, 232);</string>
      <bold>true</bold>
     </font>
    </property>
+   <property name="cursor">
+    <cursorShape>PointingHandCursor</cursorShape>
+   </property>
    <property name="styleSheet">
     <string notr="true">background-color: rgb(213, 91, 68);
 color: rgb(247, 241, 232);</string>
@@ -2170,6 +2182,9 @@ color: rgb(247, 241, 232);</string>
      <weight>75</weight>
      <bold>true</bold>
     </font>
+   </property>
+   <property name="cursor">
+    <cursorShape>PointingHandCursor</cursorShape>
    </property>
    <property name="styleSheet">
     <string notr="true">background-color: rgb(213, 91, 68);
