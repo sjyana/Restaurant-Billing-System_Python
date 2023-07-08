@@ -4,6 +4,7 @@ from PyQt5.QtWidgets import QDialog, QApplication, QTableWidgetItem, QLabel, QAb
 from PyQt5.QtGui import QPixmap
 from PyQt5.QtCore import QDate, QTimer, QTimer, QTime, Qt
 from PyQt5.uic import loadUi
+from reportlab.pdfgen import canvas
 import random, codecs
 
 orders_data = {}
@@ -593,9 +594,63 @@ class UserInfo(QDialog):
                 self.order.data['name'] = "none"
             self.order.data['name'] = cust_name
             self.file.appendOrder()
+            self.print_receipt() 
             self.mssgBox.show_info_message_box("Order has been successfully saved.") 
             self.gotoMenu()
-            
+    
+    def print_receipt(self):
+        # Get order information
+        order_code = self.printValue('orderCode')
+        subtotal = self.printValue('subtotal')
+        vat = self.printValue('vat')
+        total = self.printValue('total')
+
+        # Retrieve current date and time from class attributes
+        currDate = self.lblDate.text()
+        currTime = self.lblTime.text()
+
+        # Retrieve customer name from lineEdit
+        cust_name = self.lineEditName.text()
+        
+        # Generate receipt PDF
+        filename = f"receipt_{order_code}.pdf"
+        c = canvas.Canvas(filename)
+
+        # Set font and size
+        c.setFont("Helvetica", 12)
+
+        # Write receipt header
+        c.drawString(275, 750, "Order Receipt")
+        c.drawString(50, 720, f"Order Code: {order_code}")
+        c.drawString(50, 690, f"Date: {currDate}")
+        c.drawString(50, 660, f"Time: {currTime}")
+        c.drawString(50, 630, f"Customer Name: {cust_name}")
+
+        # Write order details
+        c.drawString(50, 600, "Order Details:")
+        c.drawString(50, 370, f"Subtotal: {subtotal}")
+        c.drawString(50, 340, f"VAT: {vat}")
+        c.drawString(50, 310, f"Total: {total}")
+
+        # Write table data
+        table_start_y = 480  # Starting y-coordinate for table data
+        row_height = 20  # Height of each table row
+
+        # Iterate over table rows
+        #for row in range(self.ordersTable.rowCount()):
+        #    item_name = self.ordersTable.item(row, 0).text()
+        #    quantity = self.ordersTable.item(row, 3).text()
+        #    amount = self.ordersTable.item(row, 4).text()
+
+            # Write item name, quantity, and amount
+            #c.drawString(100, table_start_y - row_height * row, f"{item_name}:")
+            #c.drawString(200, table_start_y - row_height * row, f"Qty: {quantity}")
+            #c.drawString(300, table_start_y - row_height * row, f"Amount: {amount}")
+
+        c.save()
+
+        self.mssgBox.show_info_message_box("Receipt printed.")
+    
     def gotoMenu(self):
         nxtForm = Menu()
         widget.addWidget(nxtForm)
