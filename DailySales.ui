@@ -20,16 +20,16 @@
    <property name="geometry">
     <rect>
      <x>0</x>
-     <y>50</y>
+     <y>10</y>
      <width>1170</width>
-     <height>220</height>
+     <height>261</height>
     </rect>
    </property>
    <widget class="QLabel" name="Logo">
     <property name="geometry">
      <rect>
-      <x>0</x>
-      <y>1</y>
+      <x>40</x>
+      <y>10</y>
       <width>1170</width>
       <height>70</height>
      </rect>
@@ -38,7 +38,7 @@
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap>../../PL Project-Java/Programming-Language-Project-Java-Project/src/pictures/logo.PNG</pixmap>
+     <pixmap>pictures/logo.PNG</pixmap>
     </property>
     <property name="alignment">
      <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
@@ -47,7 +47,7 @@
    <widget class="QPushButton" name="pushButtonPrint">
     <property name="geometry">
      <rect>
-      <x>810</x>
+      <x>800</x>
       <y>20</y>
       <width>140</width>
       <height>50</height>
@@ -56,10 +56,13 @@
     <property name="font">
      <font>
       <family>Corbel</family>
-      <pointsize>20</pointsize>
+      <pointsize>18</pointsize>
       <weight>75</weight>
       <bold>true</bold>
      </font>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
     </property>
     <property name="styleSheet">
      <string notr="true">background-color: rgb(213, 91, 68);
@@ -81,10 +84,13 @@ color: rgb(247, 241, 232);</string>
     <property name="font">
      <font>
       <family>Corbel</family>
-      <pointsize>20</pointsize>
+      <pointsize>18</pointsize>
       <weight>75</weight>
       <bold>true</bold>
      </font>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
     </property>
     <property name="styleSheet">
      <string notr="true">background-color: rgb(213, 91, 68);
@@ -97,8 +103,8 @@ color: rgb(247, 241, 232);</string>
    <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
-      <x>90</x>
-      <y>120</y>
+      <x>50</x>
+      <y>100</y>
       <width>200</width>
       <height>30</height>
      </rect>
@@ -121,8 +127,8 @@ color: rgb(247, 241, 232);</string>
    <widget class="QLabel" name="label_2">
     <property name="geometry">
      <rect>
-      <x>90</x>
-      <y>160</y>
+      <x>50</x>
+      <y>140</y>
       <width>71</width>
       <height>30</height>
      </rect>
@@ -145,16 +151,16 @@ color: rgb(247, 241, 232);</string>
    <widget class="QLabel" name="lblDate">
     <property name="geometry">
      <rect>
-      <x>160</x>
-      <y>160</y>
-      <width>150</width>
+      <x>120</x>
+      <y>140</y>
+      <width>241</width>
       <height>30</height>
      </rect>
     </property>
     <property name="font">
      <font>
       <family>Corbel</family>
-      <pointsize>18</pointsize>
+      <pointsize>16</pointsize>
       <weight>75</weight>
       <bold>true</bold>
      </font>
@@ -170,9 +176,9 @@ color: rgb(247, 241, 232);</string>
     <property name="geometry">
      <rect>
       <x>800</x>
-      <y>110</y>
+      <y>89</y>
       <width>140</width>
-      <height>20</height>
+      <height>31</height>
      </rect>
     </property>
     <property name="font">
@@ -194,9 +200,9 @@ color: rgb(247, 241, 232);</string>
     <property name="geometry">
      <rect>
       <x>800</x>
-      <y>140</y>
+      <y>119</y>
       <width>140</width>
-      <height>20</height>
+      <height>31</height>
      </rect>
     </property>
     <property name="font">
@@ -217,10 +223,10 @@ color: rgb(247, 241, 232);</string>
    <widget class="QLabel" name="label_5">
     <property name="geometry">
      <rect>
-      <x>810</x>
-      <y>190</y>
+      <x>800</x>
+      <y>170</y>
       <width>140</width>
-      <height>20</height>
+      <height>31</height>
      </rect>
     </property>
     <property name="font">
@@ -242,8 +248,8 @@ color: rgb(247, 241, 232);</string>
     <property name="geometry">
      <rect>
       <x>800</x>
-      <y>160</y>
-      <width>320</width>
+      <y>150</y>
+      <width>311</width>
       <height>20</height>
      </rect>
     </property>
@@ -259,16 +265,16 @@ color: rgb(247, 241, 232);</string>
      <string notr="true">color: rgb(60, 63, 65);</string>
     </property>
     <property name="text">
-     <string>-----------------------------------------------------------</string>
+     <string>--------------------------------------------------------</string>
     </property>
    </widget>
    <widget class="QLabel" name="salesAmt">
     <property name="geometry">
      <rect>
       <x>980</x>
-      <y>110</y>
+      <y>89</y>
       <width>130</width>
-      <height>20</height>
+      <height>31</height>
      </rect>
     </property>
     <property name="font">
@@ -293,9 +299,9 @@ color: rgb(247, 241, 232);</string>
     <property name="geometry">
      <rect>
       <x>980</x>
-      <y>140</y>
+      <y>119</y>
       <width>130</width>
-      <height>20</height>
+      <height>31</height>
      </rect>
     </property>
     <property name="font">
@@ -320,9 +326,9 @@ color: rgb(247, 241, 232);</string>
     <property name="geometry">
      <rect>
       <x>980</x>
-      <y>180</y>
+      <y>170</y>
       <width>130</width>
-      <height>20</height>
+      <height>31</height>
      </rect>
     </property>
     <property name="font">
@@ -342,6 +348,32 @@ color: rgb(247, 241, 232);</string>
     <property name="alignment">
      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
     </property>
+   </widget>
+   <widget class="QComboBox" name="orderCBox">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>200</y>
+      <width>211</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Corbel</family>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <item>
+     <property name="text">
+      <string>Greatest to least sales</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Least to greatest sales</string>
+     </property>
+    </item>
    </widget>
   </widget>
   <widget class="QScrollArea" name="scrollArea_4">
@@ -387,7 +419,7 @@ color: rgb(247, 241, 232);</string>
         </size>
        </property>
        <property name="styleSheet">
-        <string notr="true"/>
+        <string notr="true">background-color: rgb(247,241,232)</string>
        </property>
        <property name="frameShape">
         <enum>QFrame::StyledPanel</enum>
@@ -398,10 +430,10 @@ color: rgb(247, 241, 232);</string>
        <widget class="QTreeWidget" name="dailySales">
         <property name="geometry">
          <rect>
-          <x>0</x>
-          <y>10</y>
-          <width>1141</width>
-          <height>371</height>
+          <x>40</x>
+          <y>0</y>
+          <width>1081</width>
+          <height>451</height>
          </rect>
         </property>
         <property name="minimumSize">
@@ -409,6 +441,15 @@ color: rgb(247, 241, 232);</string>
           <width>1041</width>
           <height>0</height>
          </size>
+        </property>
+        <property name="font">
+         <font>
+          <family>Corbel</family>
+          <pointsize>11</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true"/>
         </property>
         <column>
          <property name="text">
@@ -418,6 +459,8 @@ color: rgb(247, 241, 232);</string>
           <font>
            <family>Corbel</family>
            <pointsize>12</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
           </font>
          </property>
          <property name="textAlignment">
@@ -432,6 +475,8 @@ color: rgb(247, 241, 232);</string>
           <font>
            <family>Corbel</family>
            <pointsize>12</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
           </font>
          </property>
          <property name="textAlignment">
@@ -446,6 +491,8 @@ color: rgb(247, 241, 232);</string>
           <font>
            <family>Corbel</family>
            <pointsize>12</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
           </font>
          </property>
          <property name="textAlignment">
@@ -460,6 +507,8 @@ color: rgb(247, 241, 232);</string>
           <font>
            <family>Corbel</family>
            <pointsize>12</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
           </font>
          </property>
          <property name="textAlignment">
@@ -474,6 +523,24 @@ color: rgb(247, 241, 232);</string>
           <font>
            <family>Corbel</family>
            <pointsize>12</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="textAlignment">
+          <set>AlignCenter</set>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Sales Amount</string>
+         </property>
+         <property name="font">
+          <font>
+           <family>Corbel</family>
+           <pointsize>12</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
           </font>
          </property>
          <property name="textAlignment">
@@ -488,544 +555,20 @@ color: rgb(247, 241, 232);</string>
           <font>
            <family>Corbel</family>
            <pointsize>12</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
           </font>
          </property>
          <property name="textAlignment">
           <set>AlignCenter</set>
          </property>
         </column>
-        <item>
-         <property name="text">
-          <string>M1</string>
-         </property>
-         <property name="font">
-          <font>
-           <family>MS Shell Dlg 2</family>
-           <pointsize>8</pointsize>
-          </font>
-         </property>
-         <property name="textAlignment">
-          <set>AlignCenter</set>
-         </property>
-         <property name="text">
-          <string>Pan Fried Salmon</string>
-         </property>
-         <property name="textAlignment">
-          <set>AlignCenter</set>
-         </property>
-         <property name="text">
-          <string>Main Dish</string>
-         </property>
-         <property name="textAlignment">
-          <set>AlignCenter</set>
-         </property>
-         <property name="text">
-          <string>220</string>
-         </property>
-         <property name="textAlignment">
-          <set>AlignCenter</set>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>M2</string>
-         </property>
-         <property name="textAlignment">
-          <set>AlignCenter</set>
-         </property>
-         <property name="text">
-          <string>Crispy Bakes Chicken</string>
-         </property>
-         <property name="textAlignment">
-          <set>AlignCenter</set>
-         </property>
-         <property name="text">
-          <string>Main Dish</string>
-         </property>
-         <property name="textAlignment">
-          <set>AlignCenter</set>
-         </property>
-         <property name="text">
-          <string>160</string>
-         </property>
-         <property name="textAlignment">
-          <set>AlignCenter</set>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>M3</string>
-         </property>
-         <property name="textAlignment">
-          <set>AlignCenter</set>
-         </property>
-         <property name="text">
-          <string>Teriyaki Chicken Bowl</string>
-         </property>
-         <property name="textAlignment">
-          <set>AlignCenter</set>
-         </property>
-         <property name="text">
-          <string>Main Dish</string>
-         </property>
-         <property name="textAlignment">
-          <set>AlignCenter</set>
-         </property>
-         <property name="text">
-          <string>180</string>
-         </property>
-         <property name="textAlignment">
-          <set>AlignCenter</set>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>M4</string>
-         </property>
-         <property name="textAlignment">
-          <set>AlignCenter</set>
-         </property>
-         <property name="text">
-          <string>Golden Shrimp</string>
-         </property>
-         <property name="textAlignment">
-          <set>AlignCenter</set>
-         </property>
-         <property name="text">
-          <string>Main Dish</string>
-         </property>
-         <property name="textAlignment">
-          <set>AlignCenter</set>
-         </property>
-         <property name="text">
-          <string>200</string>
-         </property>
-         <property name="textAlignment">
-          <set>AlignCenter</set>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>M5</string>
-         </property>
-         <property name="textAlignment">
-          <set>AlignCenter</set>
-         </property>
-         <property name="text">
-          <string>Stuffed Chicken Breast</string>
-         </property>
-         <property name="textAlignment">
-          <set>AlignCenter</set>
-         </property>
-         <property name="text">
-          <string>Main Dish</string>
-         </property>
-         <property name="textAlignment">
-          <set>AlignCenter</set>
-         </property>
-         <property name="text">
-          <string>190</string>
-         </property>
-         <property name="textAlignment">
-          <set>AlignCenter</set>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>S1</string>
-         </property>
-         <property name="textAlignment">
-          <set>AlignCenter</set>
-         </property>
-         <property name="text">
-          <string>French Fries with Alioli</string>
-         </property>
-         <property name="textAlignment">
-          <set>AlignCenter</set>
-         </property>
-         <property name="text">
-          <string>Side Dish</string>
-         </property>
-         <property name="textAlignment">
-          <set>AlignCenter</set>
-         </property>
-         <property name="text">
-          <string>80</string>
-         </property>
-         <property name="textAlignment">
-          <set>AlignCenter</set>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>S2</string>
-         </property>
-         <property name="textAlignment">
-          <set>AlignCenter</set>
-         </property>
-         <property name="text">
-          <string>Collard Greens</string>
-         </property>
-         <property name="textAlignment">
-          <set>AlignCenter</set>
-         </property>
-         <property name="text">
-          <string>Side Dish</string>
-         </property>
-         <property name="textAlignment">
-          <set>AlignCenter</set>
-         </property>
-         <property name="text">
-          <string>60</string>
-         </property>
-         <property name="textAlignment">
-          <set>AlignCenter</set>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>S3</string>
-         </property>
-         <property name="textAlignment">
-          <set>AlignCenter</set>
-         </property>
-         <property name="text">
-          <string>Chipotle Mashed Potatoes</string>
-         </property>
-         <property name="textAlignment">
-          <set>AlignCenter</set>
-         </property>
-         <property name="text">
-          <string>Side Dish</string>
-         </property>
-         <property name="textAlignment">
-          <set>AlignCenter</set>
-         </property>
-         <property name="text">
-          <string>75</string>
-         </property>
-         <property name="textAlignment">
-          <set>AlignCenter</set>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>S4</string>
-         </property>
-         <property name="textAlignment">
-          <set>AlignCenter</set>
-         </property>
-         <property name="text">
-          <string>Pesto Pasta Salad</string>
-         </property>
-         <property name="textAlignment">
-          <set>AlignCenter</set>
-         </property>
-         <property name="text">
-          <string>Side Dish</string>
-         </property>
-         <property name="textAlignment">
-          <set>AlignCenter</set>
-         </property>
-         <property name="text">
-          <string>90</string>
-         </property>
-         <property name="textAlignment">
-          <set>AlignCenter</set>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>S5</string>
-         </property>
-         <property name="textAlignment">
-          <set>AlignCenter</set>
-         </property>
-         <property name="text">
-          <string>Steamed Rice</string>
-         </property>
-         <property name="textAlignment">
-          <set>AlignCenter</set>
-         </property>
-         <property name="text">
-          <string>Side Dish</string>
-         </property>
-         <property name="textAlignment">
-          <set>AlignCenter</set>
-         </property>
-         <property name="text">
-          <string>35</string>
-         </property>
-         <property name="textAlignment">
-          <set>AlignCenter</set>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>D1</string>
-         </property>
-         <property name="textAlignment">
-          <set>AlignCenter</set>
-         </property>
-         <property name="text">
-          <string>Tiramisu</string>
-         </property>
-         <property name="textAlignment">
-          <set>AlignCenter</set>
-         </property>
-         <property name="text">
-          <string>Dessert</string>
-         </property>
-         <property name="textAlignment">
-          <set>AlignCenter</set>
-         </property>
-         <property name="text">
-          <string>100</string>
-         </property>
-         <property name="textAlignment">
-          <set>AlignCenter</set>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>D2</string>
-         </property>
-         <property name="textAlignment">
-          <set>AlignCenter</set>
-         </property>
-         <property name="text">
-          <string>Cheesecake with Berries</string>
-         </property>
-         <property name="textAlignment">
-          <set>AlignCenter</set>
-         </property>
-         <property name="text">
-          <string>Dessert</string>
-         </property>
-         <property name="textAlignment">
-          <set>AlignCenter</set>
-         </property>
-         <property name="text">
-          <string>90</string>
-         </property>
-         <property name="textAlignment">
-          <set>AlignCenter</set>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>D3</string>
-         </property>
-         <property name="textAlignment">
-          <set>AlignCenter</set>
-         </property>
-         <property name="text">
-          <string>Creme Caramel</string>
-         </property>
-         <property name="textAlignment">
-          <set>AlignCenter</set>
-         </property>
-         <property name="text">
-          <string>Dessert</string>
-         </property>
-         <property name="textAlignment">
-          <set>AlignCenter</set>
-         </property>
-         <property name="text">
-          <string>80</string>
-         </property>
-         <property name="textAlignment">
-          <set>AlignCenter</set>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>D4</string>
-         </property>
-         <property name="textAlignment">
-          <set>AlignCenter</set>
-         </property>
-         <property name="text">
-          <string>Blackberry Pie</string>
-         </property>
-         <property name="textAlignment">
-          <set>AlignCenter</set>
-         </property>
-         <property name="text">
-          <string>Dessert</string>
-         </property>
-         <property name="textAlignment">
-          <set>AlignCenter</set>
-         </property>
-         <property name="text">
-          <string>85</string>
-         </property>
-         <property name="textAlignment">
-          <set>AlignCenter</set>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>D5</string>
-         </property>
-         <property name="textAlignment">
-          <set>AlignCenter</set>
-         </property>
-         <property name="text">
-          <string>Red Velvet Cake</string>
-         </property>
-         <property name="textAlignment">
-          <set>AlignCenter</set>
-         </property>
-         <property name="text">
-          <string>Dessert</string>
-         </property>
-         <property name="textAlignment">
-          <set>AlignCenter</set>
-         </property>
-         <property name="text">
-          <string>90</string>
-         </property>
-         <property name="textAlignment">
-          <set>AlignCenter</set>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>B1</string>
-         </property>
-         <property name="textAlignment">
-          <set>AlignCenter</set>
-         </property>
-         <property name="text">
-          <string>Soda Water</string>
-         </property>
-         <property name="textAlignment">
-          <set>AlignCenter</set>
-         </property>
-         <property name="text">
-          <string>Beverage</string>
-         </property>
-         <property name="textAlignment">
-          <set>AlignCenter</set>
-         </property>
-         <property name="text">
-          <string>30</string>
-         </property>
-         <property name="textAlignment">
-          <set>AlignCenter</set>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>B2</string>
-         </property>
-         <property name="textAlignment">
-          <set>AlignCenter</set>
-         </property>
-         <property name="text">
-          <string>Bottled Mineral Water</string>
-         </property>
-         <property name="textAlignment">
-          <set>AlignCenter</set>
-         </property>
-         <property name="text">
-          <string>Beverage</string>
-         </property>
-         <property name="textAlignment">
-          <set>AlignCenter</set>
-         </property>
-         <property name="text">
-          <string>20</string>
-         </property>
-         <property name="textAlignment">
-          <set>AlignCenter</set>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>B3</string>
-         </property>
-         <property name="textAlignment">
-          <set>AlignCenter</set>
-         </property>
-         <property name="text">
-          <string>Fresh Orange Juice</string>
-         </property>
-         <property name="textAlignment">
-          <set>AlignCenter</set>
-         </property>
-         <property name="text">
-          <string>Beverage</string>
-         </property>
-         <property name="textAlignment">
-          <set>AlignCenter</set>
-         </property>
-         <property name="text">
-          <string>55</string>
-         </property>
-         <property name="textAlignment">
-          <set>AlignCenter</set>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>B4</string>
-         </property>
-         <property name="textAlignment">
-          <set>AlignCenter</set>
-         </property>
-         <property name="text">
-          <string>Milkshake</string>
-         </property>
-         <property name="textAlignment">
-          <set>AlignCenter</set>
-         </property>
-         <property name="text">
-          <string>Beverage</string>
-         </property>
-         <property name="textAlignment">
-          <set>AlignCenter</set>
-         </property>
-         <property name="text">
-          <string>80</string>
-         </property>
-         <property name="textAlignment">
-          <set>AlignCenter</set>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>B5</string>
-         </property>
-         <property name="textAlignment">
-          <set>AlignCenter</set>
-         </property>
-         <property name="text">
-          <string>Iced Tea</string>
-         </property>
-         <property name="textAlignment">
-          <set>AlignCenter</set>
-         </property>
-         <property name="text">
-          <string>Beverage</string>
-         </property>
-         <property name="textAlignment">
-          <set>AlignCenter</set>
-         </property>
-         <property name="text">
-          <string>40</string>
-         </property>
-         <property name="textAlignment">
-          <set>AlignCenter</set>
-         </property>
-        </item>
        </widget>
        <widget class="QWidget" name="bestSellerArea" native="true">
         <property name="geometry">
          <rect>
-          <x>20</x>
-          <y>430</y>
+          <x>50</x>
+          <y>460</y>
           <width>1060</width>
           <height>310</height>
          </rect>
@@ -1213,7 +756,7 @@ color: rgb(247, 241, 232);</string>
           <string/>
          </property>
          <property name="pixmap">
-          <pixmap>food_pics/milkshake.png</pixmap>
+          <pixmap>food_pics/Blueberry Cheesecake.png</pixmap>
          </property>
          <property name="alignment">
           <set>Qt::AlignCenter</set>
@@ -1232,7 +775,7 @@ color: rgb(247, 241, 232);</string>
           <string/>
          </property>
          <property name="pixmap">
-          <pixmap>food_pics/orange juice.png</pixmap>
+          <pixmap>food_pics/iced tea.png</pixmap>
          </property>
          <property name="alignment">
           <set>Qt::AlignCenter</set>
@@ -1616,7 +1159,7 @@ color: rgb(247, 241, 232);</string>
           <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
          </property>
         </widget>
-        <widget class="QLabel" name="main_sp_2">
+        <widget class="QLabel" name="side_sp">
          <property name="geometry">
           <rect>
            <x>420</x>
@@ -1643,7 +1186,7 @@ color: rgb(247, 241, 232);</string>
           <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
          </property>
         </widget>
-        <widget class="QLabel" name="main_qtty_2">
+        <widget class="QLabel" name="side_qtty">
          <property name="geometry">
           <rect>
            <x>420</x>
@@ -1670,7 +1213,7 @@ color: rgb(247, 241, 232);</string>
           <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
          </property>
         </widget>
-        <widget class="QLabel" name="main_sp_3">
+        <widget class="QLabel" name="dessert_sp">
          <property name="geometry">
           <rect>
            <x>690</x>
@@ -1697,7 +1240,7 @@ color: rgb(247, 241, 232);</string>
           <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
          </property>
         </widget>
-        <widget class="QLabel" name="main_qtty_3">
+        <widget class="QLabel" name="dessert_qtty">
          <property name="geometry">
           <rect>
            <x>690</x>
@@ -1724,7 +1267,7 @@ color: rgb(247, 241, 232);</string>
           <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
          </property>
         </widget>
-        <widget class="QLabel" name="main_sp_4">
+        <widget class="QLabel" name="bev_sp">
          <property name="geometry">
           <rect>
            <x>970</x>
@@ -1751,7 +1294,7 @@ color: rgb(247, 241, 232);</string>
           <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
          </property>
         </widget>
-        <widget class="QLabel" name="main_qtty_4">
+        <widget class="QLabel" name="bev_qtty">
          <property name="geometry">
           <rect>
            <x>970</x>
