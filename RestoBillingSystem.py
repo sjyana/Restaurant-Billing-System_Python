@@ -457,6 +457,7 @@ class AddOrder(QDialog):
             self.order.data['orderCode'] = orderCode
             self.gettingTotalAmount()
             nxtForm = UserInfo()
+            nxtForm.ordersTable = self.ordersTable 
             widget.addWidget(nxtForm)
             widget.setCurrentIndex(widget.currentIndex()+1)
         else:
@@ -485,6 +486,7 @@ class UserInfo(QDialog):
         self.comboBoxMOP.activated.connect(self.comBox)
         self.order = Orders()
         self.file = FileHandling()
+        self.ordersTable = None
         
     def displayDateTime(self):
         now = QDate.currentDate()
@@ -620,7 +622,7 @@ class UserInfo(QDialog):
         c.setFont("Helvetica", 12)
 
         # Write receipt header
-        c.drawString(275, 750, "Order Receipt")
+        c.drawString(250, 750, "Order Receipt")
         c.drawString(50, 720, f"Order Code: {order_code}")
         c.drawString(50, 690, f"Date: {currDate}")
         c.drawString(50, 660, f"Time: {currTime}")
@@ -628,24 +630,24 @@ class UserInfo(QDialog):
 
         # Write order details
         c.drawString(50, 600, "Order Details:")
-        c.drawString(50, 370, f"Subtotal: {subtotal}")
-        c.drawString(50, 340, f"VAT: {vat}")
-        c.drawString(50, 310, f"Total: {total}")
+        c.drawString(250, 170, f"Subtotal: {subtotal}")
+        c.drawString(250, 140, f"VAT:       {vat}")
+        c.drawString(250, 110, f"Total:     {total}")
 
         # Write table data
-        table_start_y = 480  # Starting y-coordinate for table data
+        table_start_y = 580  # Starting y-coordinate for table data
         row_height = 20  # Height of each table row
 
         # Iterate over table rows
-        #for row in range(self.ordersTable.rowCount()):
-        #    item_name = self.ordersTable.item(row, 0).text()
-        #    quantity = self.ordersTable.item(row, 3).text()
-        #    amount = self.ordersTable.item(row, 4).text()
+        for row in range(self.ordersTable.rowCount()):
+            item_name = self.ordersTable.item(row, 0).text()
+            quantity = self.ordersTable.item(row, 3).text()
+            amount = self.ordersTable.item(row, 4).text()
 
-            # Write item name, quantity, and amount
-            #c.drawString(100, table_start_y - row_height * row, f"{item_name}:")
-            #c.drawString(200, table_start_y - row_height * row, f"Qty: {quantity}")
-            #c.drawString(300, table_start_y - row_height * row, f"Amount: {amount}")
+            #Write item name, quantity, and amount
+            c.drawString(100, table_start_y - row_height * row, f"{item_name}")
+            c.drawString(200, table_start_y - row_height * row, f"Qty: {quantity}")
+            c.drawString(300, table_start_y - row_height * row, f"Amount: {amount}")
 
         c.save()
 
