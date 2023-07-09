@@ -69,7 +69,7 @@
    <property name="geometry">
     <rect>
      <x>9</x>
-     <y>160</y>
+     <y>170</y>
      <width>1151</width>
      <height>211</height>
     </rect>
@@ -1568,8 +1568,8 @@
   <widget class="QTreeWidget" name="orderList">
    <property name="geometry">
     <rect>
-     <x>9</x>
-     <y>380</y>
+     <x>10</x>
+     <y>390</y>
      <width>1151</width>
      <height>291</height>
     </rect>
@@ -2192,6 +2192,56 @@ color: rgb(247, 241, 232);</string>
    </property>
    <property name="text">
     <string>Menu</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_21">
+   <property name="geometry">
+    <rect>
+     <x>1120</x>
+     <y>130</y>
+     <width>41</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border: 1px solid rgb(66,72,40)</string>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::Box</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Plain</enum>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap>pictures/search.png</pixmap>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="search">
+   <property name="geometry">
+    <rect>
+     <x>930</x>
+     <y>130</y>
+     <width>191</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Corbel</family>
+     <pointsize>14</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
+   <property name="text">
+    <string>search...</string>
    </property>
   </widget>
  </widget>
