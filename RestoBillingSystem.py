@@ -1,7 +1,7 @@
 import sys
 from PyQt5 import QtWidgets
 from PyQt5.QtWidgets import QDialog, QApplication, QTableWidgetItem, QLabel, QAbstractItemView, QMessageBox, QTreeWidgetItem
-from PyQt5.QtGui import QPixmap
+from PyQt5.QtGui import QPixmap, QPainter, QPdfWriter, QPageSize
 from PyQt5.QtCore import QDate, QTimer, QTimer, QTime, Qt
 from PyQt5.uic import loadUi
 from reportlab.pdfgen import canvas
@@ -672,6 +672,7 @@ class DisplayAllOrders(QDialog):
         self.pushbuttonUpdate.clicked.connect(self.updateStatus)
         self.pushbuttonDelete.clicked.connect(self.deleteOrder)
         self.pushbuttonMenu.clicked.connect(self.gotoMenu)
+        self.search.textChanged.connect(self.perform_search)
 
     def allocateTable(self):
         self.file.RetrieveOrder()
@@ -727,6 +728,15 @@ class DisplayAllOrders(QDialog):
             self.lblStatus.setText(selected_order[28])
 
     def initialize_orderText(self):
+        self.lblOrder.setText('')
+        self.lblName.setText('')
+        self.lblDate.setText('')
+        self.lblTime.setText('')
+        self.lblSub.setText('')
+        self.lblTotal.setText('')
+        self.lblVat.setText('')
+        self.lblMop.setText('')
+        self.lblStatus.setText('')
         self.lineEditM1.setText('')
         self.lineEditM2.setText('')
         self.lineEditM3.setText('')
@@ -782,7 +792,25 @@ class DisplayAllOrders(QDialog):
                     self.file.saveOrder()
         else:
             self.mssgBox.show_warning_message_box("Please select an order.")
+    
+    def perform_search(self):
+        self.initialize_orderText()
+        text = self.search.text().lower().strip()
+
+        if not text:
+            self.orderList.clear()
+            self.allocateTable()
+            return
         
+        for i in range(self.orderList.topLevelItemCount()):
+            item = self.orderList.topLevelItem(i)
+            item.setHidden(True)
+
+            for column in range(item.columnCount()):
+                if text in item.text(column).lower():
+                    item.setHidden(False)
+                    break
+
     def gotoMenu(self):
         nxtForm = Menu()
         widget.addWidget(nxtForm)
@@ -843,6 +871,7 @@ class DailySales(QDialog):
         loadUi("DailySales.ui",self)
         self.daily_sales = {}
         self.food = foodDesc()
+        self.msssgbox = MessageBox()
         self.lblDate.setText(date)
         self.gettingDailySales()
         self.bestSeller_main()
@@ -851,6 +880,7 @@ class DailySales(QDialog):
         self.bestSeller_bev()
         self.pushButtonMenu.clicked.connect(self.gotoMenu)
         self.orderCBox.activated.connect(self.gettingDailySales)
+        self.pushButtonPrint.clicked.connect(self.print_to_pdf)
     
     def gettingDailySales(self):
         M1_total = 0; M2_total = 0; M3_total = 0; M4_total = 0; M5_total = 0
@@ -886,7 +916,6 @@ class DailySales(QDialog):
             vat += float(order_data['vat'])
             totalAmt += float(order_data['total'])
 
-        #self.daily(1, M1_total, M2_total, M3_total, M4_total, M5_total, S1_total, S2_total, S3_total, S4_total, S5_total, D1_total, D2_total, D3_total, D4_total, D5_total, B1_total, B2_total, B3_total, B4_total, B5_total)
         self.daily_sales[1] = {
             'M1': M1_total, 'M2': M2_total, 'M3': M3_total, 'M4': M4_total, 'M5': M5_total,
             'S1': S1_total, 'S2': S2_total, 'S3': S3_total, 'S4': S4_total, 'S5': S5_total,
@@ -1108,13 +1137,29 @@ class DailySales(QDialog):
     def comBox(self):
         mop = self.orderCBox.currentText()
         self.dailySales.clear()
-        #order = self.daily_sales[1]
         if mop == "Greatest to least sales":
             self.daily_sales[1] = {k: dict(sorted(v.items(), key=lambda item: item[1], reverse=True)) for k, v in self.daily_sales.items()}
             self.allocateDSTable
         else:
             self.daily_sales[1] = {k: dict(sorted(v.items(), key=lambda item: item[1])) for k, v in self.daily_sales.items()} 
             self.allocateDSTable()
+
+    def print_to_pdf(self):
+        file_name = ("Daily Sales Report (" + self.lblDate.text() + ").pdf")
+
+        dpi = self.logicalDpiX()
+        page_size = QPageSize(self.size())
+
+        printer = QPdfWriter(file_name)
+        printer.setResolution(dpi)
+        printer.setPageSize(page_size)
+
+        painter = QPainter(printer)
+        self.render(painter)
+        painter.end()
+
+        self.msssgbox.show_info_message_box("PDF file successfully created.")
+        print("UI printed to PDF:", file_name)
 
     def gotoMenu(self):
         nxtForm = Menu()
