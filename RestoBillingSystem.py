@@ -435,9 +435,12 @@ class AddOrder(QDialog):
             self.mssgBox.show_warning_message_box("Please select one order to be deleted.")
         else:
             sub = self.ordersTable.item(selected_row, 4)
+            qtty = self.ordersTable.item(selected_row, 3)
+            food_code_item = self.ordersTable.item(selected_row, 0)
             if sub is not None:
                 sub = float(sub.text())
                 self.order.data['subtotal'] -= sub
+            
             self.total_lbl.setText("{:.2f}".format((self.order.data['subtotal'])))
             self.ordersTable.removeRow(selected_row)
             if selected_row < rows - 1:
