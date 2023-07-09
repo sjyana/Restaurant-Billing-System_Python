@@ -25,12 +25,12 @@ class Orders:
         }
     
     def searchOrdersByDate(self, search_date):
-        global orders_data  # Access the global variable
+        global orders_data 
         filtered_orders = {}
         for order_num, order_data in self.data.items():
             if order_data['date'] == search_date:
                 filtered_orders[order_num] = order_data
-        orders_data = filtered_orders  # Update the global variable
+        orders_data = filtered_orders
 
 class foodDesc:
     def __init__(self):
@@ -78,7 +78,6 @@ class DataAdder():
             self.set_table_item(row_index, 3, quantity)
             self.set_table_item(row_index, 4, amount)
             
-
             self.table.setRowHeight(row_index, 60)
             
     def set_table_item(self, row, column, value):
@@ -461,7 +460,7 @@ class AddOrder(QDialog):
             widget.addWidget(nxtForm)
             widget.setCurrentIndex(widget.currentIndex()+1)
         else:
-            self.show_warning_message_box("Please enter an order first.")
+            self.mssgBox.show_warning_message_box("Please enter an order first.")
         
     def gettingTotalAmount(self):
         sub = float(self.order.data['subtotal'])
@@ -474,6 +473,7 @@ class AddOrder(QDialog):
             self.order.data['total'] = 0
         self.order.data['total'] = "{:.2f}".format(totalAmt)
 
+#user information form
 class UserInfo(QDialog):
     def __init__(self):
         super(UserInfo,self).__init__()
@@ -576,27 +576,26 @@ class UserInfo(QDialog):
                 else:
                     change = cash - amt
                     self.lblChange.setText("{:.2f}".format((change)))
-                    
-        if name_len == 0:
-            self.mssgBox.show_warning_message_box("Please enter name.")
-        else:       
-            cust_name = self.lineEditName.text()
-            currDate = QDate.currentDate().toString(Qt.ISODate)
-            currTime = str(self.lblTime.text())
-            if 'date' not in self.order.data:
-                self.order.data['date'] = "none"
-            self.order.data['date'] = currDate
-            if 'time' not in self.order.data:
-                self.order.data['time'] = "none"
-            self.order.data['time'] = currTime
+                    if name_len == 0:
+                        self.mssgBox.show_warning_message_box("Please enter name.")
+                    else:       
+                        cust_name = self.lineEditName.text()
+                        currDate = QDate.currentDate().toString(Qt.ISODate)
+                        currTime = str(self.lblTime.text())
+                        if 'date' not in self.order.data:
+                            self.order.data['date'] = "none"
+                        self.order.data['date'] = currDate
+                        if 'time' not in self.order.data:
+                            self.order.data['time'] = "none"
+                        self.order.data['time'] = currTime
 
-            if 'name' not in self.order.data:
-                self.order.data['name'] = "none"
-            self.order.data['name'] = cust_name
-            self.file.appendOrder()
-            self.print_receipt() 
-            self.mssgBox.show_info_message_box("Order has been successfully saved.") 
-            self.gotoMenu()
+                        if 'name' not in self.order.data:
+                            self.order.data['name'] = "none"
+                        self.order.data['name'] = cust_name
+                        self.file.appendOrder()
+                        self.print_receipt() 
+                        self.mssgBox.show_info_message_box("Order has been successfully saved.") 
+                        self.gotoMenu()
     
     def print_receipt(self):
         # Get order information
@@ -928,7 +927,7 @@ class DailySales(QDialog):
         self.salesTax.setText("{:.2f}".format(vat))
         
         mop = self.orderCBox.currentText()
-        if mop == 'Greatest to least sales':
+        if mop == 'Greatest to least number of sales':
             self.daily_sales = {k: dict(sorted(v.items(), key=lambda item: item[1], reverse=True)) for k, v in self.daily_sales.items()}
         else:
             self.daily_sales = {k: dict(sorted(v.items(), key=lambda item: item[1])) for k, v in self.daily_sales.items()} 
@@ -1159,7 +1158,6 @@ class DailySales(QDialog):
         painter.end()
 
         self.msssgbox.show_info_message_box("PDF file successfully created.")
-        print("UI printed to PDF:", file_name)
 
     def gotoMenu(self):
         nxtForm = Menu()
